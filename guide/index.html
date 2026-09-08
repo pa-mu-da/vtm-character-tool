@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>キャラクター作成ガイド（Neonate編） - Vampire: The Masquerade Alpha 1.0</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+  <div class="nav-container">
+    <a href="index.html" class="site-title">
+      <span class="vtm-symbol">☥</span>
+      <span class="title-text">VtM キャラクター作成ガイド</span>
+    </a>
+    <ul class="main-nav-list">
+      <li class="main-nav-item active"><a href="index.html">キャラメイク手順 (9ステップ)</a></li>
+      <li class="main-nav-item"><a href="lifepaths.html">ライフパス (Lifepaths)</a></li><li class="main-nav-item"><a href="skills.html">技能 (Skills)</a></li><li class="main-nav-item"><a href="natures.html">本性 (Natures)</a></li><li class="main-nav-item"><a href="merits.html">長所 (Merits)</a></li><li class="main-nav-item highlight"><a href="clan/index.html">選択可能な氏族データ ↗</a></li>
+      <li class="main-nav-item" style="margin-left:auto;"><a href="../index.html" style="color:#ff6b6b; font-weight:bold;">⚔️ キャラシート作成ツール ↗</a></li>
+    </ul>
+  </div>
+</header>
+
+  <main class="main-content">
+    <div class="hero-banner">
+      <span class="hero-tag">Vampire: The Masquerade Alpha 1.0</span>
+      <h1 class="hero-title">キャラクター作成ガイド（Neonate編）</h1>
+      <p class="hero-subtitle">
+        あなたのキャラクターの過去、氏族の呪い、そして血の能力を物語とデータの両面から肉付けしていく、<strong>全9つのステップ</strong>の完全解説です。本ガイドはプレイ環境である「Neonate（若輩吸血鬼）」に特化して構成されています。
+      </p>
+    </div>
+
+    <div class="quick-nav">
+      <a href="#step1">STEP 1: 何者であるか？</a>
+      <a href="#step2">STEP 2: 氏族の選択</a>
+      <a href="#step3">STEP 3: サイアと世代</a>
+      <a href="#step4">STEP 4: ライフパス</a>
+      <a href="#step5">STEP 5: 能力値と技能</a>
+      <a href="#step6">STEP 6: 規律・特性・長所</a>
+      <a href="#step7">STEP 7: 人間性と本性</a>
+      <a href="#step8">STEP 8: 資産と装備</a>
+      <a href="#step9">STEP 9: 仕上げ</a>
+    </div>
+
+    <!-- STEP 1 -->
+    <div class="step-card" id="step1">
+      <div class="step-header">
+        <span class="step-number">STEP 1</span>
+        <h2 class="step-title">WHAT ARE YOU?（何者であるか？）</h2>
+        <span class="step-en-title">Choose Your Tier</span>
+        <span class="step-badge-neonate">Neonate 固定</span>
+      </div>
+      <div class="step-content">
+        <p>
+          あなたがプレイする吸血鬼の階級である<strong>「ティア（Tier / プレイ環境）」</strong>を決定します。本ガイドでは、標準プレイ環境である<strong>「Neonate（若輩吸血鬼）」</strong>として作成します。
+        </p>
+
+        <div class="data-table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>ヴァンパイアの階級（ティア）</th>
+                <th>最大ドット上限</th>
+                <th>規律（Discipline）最大上限</th>
+                <th>世代補正値（Gen Modifier）</th>
+                <th>説明</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="background: rgba(196, 30, 58, 0.1);">
+                <td><strong>Neonate（若輩吸血鬼）</strong></td>
+                <td style="text-align:center;"><strong>5</strong></td>
+                <td style="text-align:center;"><strong>5</strong></td>
+                <td style="text-align:center; color:var(--crimson); font-size:1.1rem; font-weight:700;">1</td>
+                <td>抱擁（Embrace）されてから50年未満の若者。現代社会の感覚を色濃く残している。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size:0.9rem; color:var(--text-muted);">
+          ※Neonateの世代補正値は「<strong>1</strong>」です。この数値は、狂乱への抵抗難易度、敵からの通常物理ダメージの軽減強度、および様々なルール判定の基準値として使用されます。
+        </p>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="step-card" id="step2">
+      <div class="step-header">
+        <span class="step-number">STEP 2</span>
+        <h2 class="step-title">YOUR CLAN（氏族の選択）</h2>
+        <span class="step-en-title">Select Your Bloodline</span>
+      </div>
+      <div class="step-content">
+        <p>
+          あなたが属する<strong>「氏族（Clan）」</strong>を選択します。氏族はあなたの血脈（ファミリー）であり、宿す呪いや暴走した際の衝動を決定します。
+        </p>
+        <p>氏族を1つ選択することで、以下の要素が自動的に決定されます：</p>
+        <ul>
+          <li><strong>氏族規律（Clan Disciplines）</strong>：初期ドットを割り振ることができる、血脈に馴染み深い3つの規律。</li>
+          <li><strong>氏族の呪い（Clan Curse）</strong>：常時、あるいは特定の状況においてキャラクターを縛る制限ペナルティ。</li>
+          <li><strong>氏族固有の暴走（Clan Frenzy）</strong>：理性を失い「獣のフレンジー（Beast Frenzy）」状態に陥った際、獣が引き起こす固有の衝動やペナルティ行動。</li>
+        </ul>
+
+                <div class="link-banner" style="margin-bottom:1rem; border-left-color:var(--gold);">
+          <div class="link-banner-text">
+            <strong>全14ライフパスの技能・資産詳細データ</strong>（各経歴の獲得可能技能・資産リストと逐語訳）を確認できます。
+          </div>
+          <a href="lifepaths.html" class="link-banner-btn" style="background:var(--gold); color:#000;">全14ライフパスの詳細を見る ↗</a>
+        </div>
+        <div class="link-banner">
+          <div class="link-banner-text">
+            <strong>7つの選択可能氏族の背景、呪い、狂乱、および取得可能な訓え・パワーの詳細</strong>は専用データベースで閲覧できます。
+          </div>
+          <a href="clan/index.html" class="link-banner-btn">選択可能な氏族データを見る ↗</a>
+        </div>
+
+        <div style="margin-top:1rem; font-size:0.88rem; color:var(--text-dim); display:flex; flex-wrap:wrap; gap:0.5rem 1rem;">
+          <span>個別ページリンク:</span>
+          <a href="clan/brujah.html" style="color:var(--text-muted);">ブルハ</a> |
+          <a href="clan/gangrel.html" style="color:var(--text-muted);">ギャンレル</a> |
+          <a href="clan/lasombra.html" style="color:var(--text-muted);">ラソンブラ</a> |
+          <a href="clan/ministry.html" style="color:var(--text-muted);">ミニストリー</a> |
+          <a href="clan/nosferatu.html" style="color:var(--text-muted);">ノスフェラトゥ</a> |
+          <a href="clan/toreador.html" style="color:var(--text-muted);">トレアドール</a> |
+          <a href="clan/ventrue.html" style="color:var(--text-muted);">ヴェントルー</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="step-card" id="step3">
+      <div class="step-header">
+        <span class="step-number">STEP 3</span>
+        <h2 class="step-title">YOUR SIRE AND GENERATION（サイアと世代の選択）</h2>
+        <span class="step-en-title">Sire Relationship & Generation</span>
+      </div>
+      <div class="step-content">
+        <p>
+          あなたを吸血鬼に変えた親である<strong>サイア（Sire）</strong>との関係、および血の濃さ（世代）を決定します。
+        </p>
+        <ul>
+          <li>
+            <strong>サイアの選択とボーナス規律</strong>：<br>
+            サイアがあなたをどう扱い、どのように初期の夜を過ごしたかによって、血の目覚め方が変わります。選択した「サイアのタイプ（Sire Type）」に応じて、<strong>特定の規律（Discipline）を「追加で1ドット」獲得</strong>します（これは氏族規律以外から選べる場合もあります）。
+          </li>
+        </ul>
+
+        <div class="data-table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>サイアのタイプ</th>
+                <th>関係性の特徴</th>
+                <th>ボーナス規律（いずれか1つを1ドット獲得）</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Caring Sire</strong>（慈愛ある親）</td>
+                <td>あなたを保護し、吸血鬼としての生き方を優しく手取り足取り教えた。</td>
+                <td>Fortitude（堅牢）、Potence（怪力）、Presence（威厳）</td>
+              </tr>
+              <tr>
+                <td><strong>Cruel Sire</strong>（酷薄な親）</td>
+                <td>あなたを道具や消耗品として冷酷に扱い、過酷な試練を課した。</td>
+                <td>Dominate（支配）、Fortitude（堅牢）、Obfuscate（隠匿）</td>
+              </tr>
+              <tr>
+                <td><strong>Manipulative Sire</strong>（策士たる親）</td>
+                <td>チェスの駒のようにあなたを操り、権力闘争の手駒として育てた。</td>
+                <td>Dominate（支配）、Potence（怪力）、Presence（威厳）</td>
+              </tr>
+              <tr>
+                <td><strong>Secretive Sire</strong>（秘密主義の親）</td>
+                <td>素性や目的を一切明かさず、謎めいた接触と指示のみを残した。</td>
+                <td>Auspex（予見）、Celerity（迅速）、Obfuscate（隠匿）</td>
+              </tr>
+              <tr>
+                <td><strong>Unknown Sire</strong>（素性不明の親）</td>
+                <td>抱擁直後に姿を消し、あなたをストリートに放置した。親の顔も知らない。</td>
+                <td>Celerity（迅速）、Fortitude（堅牢）、Potence（怪力）</td>
+              </tr>
+              <tr>
+                <td><strong>Vigilant Sire</strong>（厳格な親）</td>
+                <td>マスカレードの法と掟を徹底的に叩き込み、隙のない監視を続けた。</td>
+                <td>Auspex（予見）、Dominate（支配）、Fortitude（堅牢）</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <ul>
+          <li>
+            <strong>世代（Generation）の決定</strong>：<br>
+            あなたの血の濃さを決定します（Neonateであれば通常11〜13世代）。Neonateの世代補正値（1）は、敵から受ける通常の物理ダメージを差し引く（軽減する）際の強度になります。
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- STEP 4 -->
+    <div class="step-card" id="step4">
+      <div class="step-header">
+        <span class="step-number">STEP 4</span>
+        <h2 class="step-title">YOUR LIFEPATHS（ライフパスの選択）</h2>
+        <span class="step-en-title">Choose 2 Lifepaths</span>
+      </div>
+      <div class="step-content">
+        <p>
+          キャラクターが人間だった頃の職業や、吸血鬼になってから現代までに経験した生業を表す<strong>「ライフパス（経歴）」を通常「2つ」</strong>選択します。
+        </p>
+        <p>選んだライフパスごとに、用意されたリストから能力を割り振ります：</p>
+        <ul>
+          <li><strong>技能（Skills）の配分</strong>：ライフパスごとに指定されている5つの関連技能に、<strong>合計5ドット</strong>を自由に割り振ります（2つのライフパスで計10ドット）。</li>
+          <li><strong>資産（Resources）の配分</strong>：ライフパスごとに指定されている3つの資産に、<strong>合計3ドット</strong>を自由に割り振ります（2つのライフパスで計6ドット）。</li>
+          <li><strong>フォーカス（Focus）の獲得</strong>：技能ドットが奇数（<strong>1ドット目、3ドット目</strong>）に達するたびに、その技能の専門分野を示す「フォーカス」を指定して獲得します（適用される判定時にダイスプール＋1個）。</li>
+          <li><strong>作成時の上限ルール</strong>：キャラクター作成時、<strong>いかなる技能も「3ドット」を超えることはできません</strong>。もしライフパスの重複等で4ドット以上になってしまう場合は、3ドットを超えた分のドットを他の任意の技能へ自由に振り分け直します。</li>
+        </ul>
+
+                <div class="link-banner" style="margin-bottom:1rem; border-left-color:var(--gold);">
+          <div class="link-banner-text">
+            <strong>全14ライフパスの技能・資産詳細データ</strong>（各経歴の獲得可能技能・資産リストと逐語訳）を確認できます。
+          </div>
+          <a href="lifepaths.html" class="link-banner-btn" style="background:var(--gold); color:#000;">全14ライフパスの詳細を見る ↗</a>
+        </div>
+        <div class="link-banner">
+          <div class="link-banner-text">
+            <strong>14技能の詳細定義と代表的なフォーカス例</strong>を逐語訳で確認できます。
+          </div>
+          <a href="skills.html" class="link-banner-btn">全14技能の解説を見る ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 5 -->
+    <div class="step-card" id="step5">
+      <div class="step-header">
+        <span class="step-number">STEP 5</span>
+        <h2 class="step-title">YOUR ATTRIBUTES AND SKILLS（能力値と追加技能の決定）</h2>
+        <span class="step-en-title">Distribute Attributes & Bonus Skills</span>
+      </div>
+      <div class="step-content">
+        <p>
+          キャラクターの生まれ持った資質と、ライフパス外で個人的に訓練した技能を決定します。
+        </p>
+
+        <h3 style="color:#fff; font-size:1.15rem; margin:1.25rem 0 0.5rem;">1. 能力値（Attributes）の決定</h3>
+        <p>
+          能力値は「肉体（Physical）」「社交（Social）」「精神（Mental）」の3カテゴリーに分かれ、それぞれに「力（Power）」「技術（Finesse）」「抵抗（Resistance）」の3つのAttribute（計9つ）が存在します。
+        </p>
+        <p>
+          Neonate（若輩吸血鬼）に割り当てるドットのセットは <strong>`7 / 5 / 3` ドット</strong> です：
+        </p>
+        <ul>
+          <li><strong>プライマリ（得意カテゴリー）</strong>：<strong>7ドット</strong></li>
+          <li><strong>セカンダリ（普通カテゴリー）</strong>：<strong>5ドット</strong></li>
+          <li><strong>ターシャリ（苦手カテゴリー）</strong>：<strong>3ドット</strong></li>
+        </ul>
+        <p>
+          3つのカテゴリー（肉体・社交・精神）に対して上記セットを1つずつ割り当て、それぞれのドットを各カテゴリー内の3つのAttribute（例えば肉体なら筋力、敏捷力、持久力）へ自由に分配します。
+        </p>
+
+        <div class="data-table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>カテゴリー</th>
+                <th>力 (Power)</th>
+                <th>技術 (Finesse)</th>
+                <th>抵抗 (Resistance)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>肉体 (Physical)</strong></td>
+                <td><strong>Strength（筋力）</strong></td>
+                <td><strong>Dexterity（敏捷力）</strong></td>
+                <td><strong>Stamina（持久力）</strong></td>
+              </tr>
+              <tr>
+                <td><strong>社交 (Social)</strong></td>
+                <td><strong>Charisma（カリスマ）</strong></td>
+                <td><strong>Manipulation（操作力）</strong></td>
+                <td><strong>Composure（平静）</strong></td>
+              </tr>
+              <tr>
+                <td><strong>精神 (Mental)</strong></td>
+                <td><strong>Intelligence（知力）</strong></td>
+                <td><strong>Wits（機知）</strong></td>
+                <td><strong>Resolve（決意）</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="color:#fff; font-size:1.15rem; margin:1.5rem 0 0.5rem;">2. 追加技能（Skills）の分配</h3>
+        <p>
+          ライフパスの枠を超えた個人的な人生経験を表現するため、<strong>一律で「追加の8ドット」</strong>を獲得します。
+        </p>
+        <p>
+          上限3ドットのルールに従いながら、シート上のすべての技能に自由に分配し、技能ドットが奇数（1、3ドット目）に達した場合は対応するフォーカスを獲得します。
+        </p>
+      </div>
+    </div>
+
+    <!-- STEP 6 -->
+    <div class="step-card" id="step6">
+      <div class="step-header">
+        <span class="step-number">STEP 6</span>
+        <h2 class="step-title">YOUR DISCIPLINES, CLAN TRAITS, AND MERITS（規律、氏族特性、長所の決定）</h2>
+        <span class="step-en-title">Supernatural Powers & Perks</span>
+      </div>
+      <div class="step-content">
+        <p>
+          ヴァンパイアの超常パワー、氏族の個性的な能力、そして個人的な長所を獲得します。Neonateに与えられるリソースは以下の通りです：
+        </p>
+
+        <ul>
+          <li>
+            <strong>初期規律ドット</strong>：<strong>3ドット</strong><br>
+            初期は氏族規律の3つにのみ分配可能。これにSTEP 3でサイアから得た「＋1ドット」を加えた<strong>合計4ドット</strong>をシートに反映します。
+          </li>
+          <li>
+            <strong>パワー（Discipline Powers）の習得</strong>：<strong>4つのパワー</strong><br>
+            自分がドットを持っている規律から、そのドット数以下のランクのパワーを4つ選んで習得します（最低1ドット持っていなければパワーは習得できません）。
+          </li>
+          <li>
+            <strong>メリット（Merits）</strong>：<strong>1つ</strong><br>
+            血の絆への抵抗や、強靭な皮膚など、キャラクターのユニークな長所を1つ選択します。
+          </li>
+          <li>
+            <strong>氏族特性（Clan Traits）</strong>：<strong>2つ</strong><br>
+            氏族固有の常時発動、または任意起動できる特殊能力を選択します。
+          </li>
+        </ul>
+
+                <div class="link-banner" style="margin-bottom:1rem; border-left-color:var(--gold);">
+          <div class="link-banner-text">
+            <strong>全14ライフパスの技能・資産詳細データ</strong>（各経歴の獲得可能技能・資産リストと逐語訳）を確認できます。
+          </div>
+          <a href="lifepaths.html" class="link-banner-btn" style="background:var(--gold); color:#000;">全14ライフパスの詳細を見る ↗</a>
+        </div>
+        <div class="link-banner">
+          <div class="link-banner-text">
+            <strong>全13種類の長所（Merits）の前提条件と具体的ルール効果</strong>を確認できます。
+          </div>
+          <a href="merits.html" class="link-banner-btn">全13長所の解説を見る ↗</a>
+        </div>
+
+        <div class="link-banner" style="margin-top:0.75rem;">
+          <div class="link-banner-text">
+            <strong>各氏族で習得できる規律とパワーの具体的ルール</strong>は氏族データベースで検索できます。
+          </div>
+          <a href="clan/index.html" class="link-banner-btn">規律・パワーデータベースを見る ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 7 -->
+    <div class="step-card" id="step7">
+      <div class="step-header">
+        <span class="step-number">STEP 7</span>
+        <h2 class="step-title">HUMANITY SCALE AND YOUR NATURE（人間性スケールと本性の設定）</h2>
+        <span class="step-en-title">Humanity & Mortal Anchor</span>
+      </div>
+      <div class="step-content">
+        <p>
+          吸血鬼の内なる葛藤である「怪物」と「人間性」のバランス、および暴走を引き起こすストレスゲージを定義します。
+        </p>
+        <ul>
+          <li>
+            <strong>人間性スケール（Humanity Scale）の設定</strong>：<br>
+            キャラクターは、怪物側（Monstrous）と人間側（Mortal）のちょうど中間に位置する<strong>「Neutral State（中立状態）」</strong>からゲームを開始します。
+          </li>
+          <li>
+            <strong>本性（Nature）の選択</strong>：<br>
+            あなたが人間らしさを保つための信念や行動原理を表す「本性（Nature）」を1つ選択します。これが人間性スケールの人間側の軸（Mortal）を司ります。
+          </li>
+          <li>
+            <strong>トラッカーの初期マーク</strong>：<br>
+            「Beastトラッカー（怪物ストレス）」と「Natureトラッカー（人間ストレス）」の5マスのゲージに、毎晩目覚めた時点での興奮状態を表す<strong>「1マーク」をそれぞれ最初から記入</strong>します。
+          </li>
+        </ul>
+
+                <div class="link-banner" style="margin-bottom:1rem; border-left-color:var(--gold);">
+          <div class="link-banner-text">
+            <strong>全14ライフパスの技能・資産詳細データ</strong>（各経歴の獲得可能技能・資産リストと逐語訳）を確認できます。
+          </div>
+          <a href="lifepaths.html" class="link-banner-btn" style="background:var(--gold); color:#000;">全14ライフパスの詳細を見る ↗</a>
+        </div>
+        <div class="link-banner">
+          <div class="link-banner-text">
+            <strong>8つの本性の詳細、充足条件、および感情爆発（Outburst）</strong>を確認できます。
+          </div>
+          <a href="natures.html" class="link-banner-btn">全8本性の解説を見る ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 8 -->
+    <div class="step-card" id="step8">
+      <div class="step-header">
+        <span class="step-number">STEP 8</span>
+        <h2 class="step-title">YOUR RESOURCES（資産の設定）</h2>
+        <span class="step-en-title">Resources, Gear & Weapons</span>
+      </div>
+      <div class="step-content">
+        <p>
+          あなたがこれまでの人生や不死の年月で蓄積してきた財産や社会的な資本を決定します。
+        </p>
+        <ul>
+          <li>
+            <strong>追加資産ドットの分配</strong>：<br>
+            STEP 4のライフパスで獲得した資産ドット（計6ドット）に加え、Neonateは<strong>追加の「3ドット」</strong>を獲得し、シート上のすべての資産（Haven, Vehicle, Ally, Herd, Wealth 等）に自由に配分します。<br>
+            ※Neonateにおける<strong>1つの資産への投資上限は「5ドット」</strong>です。<br>
+            ※この資産ドットを持ち寄り、コトリエ全員で共有する「共有の隠れ家（Shared Haven）」を作ることもできます。
+          </li>
+          <li>
+            <strong>重要アイテム（Important Items）の決定</strong>：<br>
+            身分証、携帯電話、隠れ家の鍵といった基本アイテムのほかに、<strong>選択したライフパスごとに1つずつ、その経歴にふさわしい追加の重要アイテム（計2つ）</strong>を決定して所持します。
+          </li>
+          <li>
+            <strong>武器（Weapons）の決定</strong>：<br>
+            身を守るための武器（軽武器/2ダメージ/格闘距離、中火器/3ダメージ/長距離まで、重武器など）を決定します。
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- STEP 9 -->
+    <div class="step-card" id="step9">
+      <div class="step-header">
+        <span class="step-number">STEP 9</span>
+        <h2 class="step-title">FINISHING TOUCHES（仕上げ）</h2>
+        <span class="step-en-title">Final Calculations & Roleplay Identity</span>
+      </div>
+      <div class="step-content">
+        <p>
+          キャラクター作成の最終段階です。生命線となるステータスを計算し、キャラクターの設定を固めます。
+        </p>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1rem; margin:1.25rem 0;">
+          <div style="background:var(--bg-inner); border:1px solid var(--border); border-radius:6px; padding:1.25rem;">
+            <div style="font-size:0.8rem; text-transform:uppercase; color:var(--gold); font-weight:700; margin-bottom:0.4rem;">最大Vitae（体力・血の限界値）</div>
+            <div style="font-size:1.3rem; font-weight:700; color:#fff; font-family:var(--font-serif); margin-bottom:0.4rem;">
+              10 ＋ Stamina（持久力）
+            </div>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin:0;">
+              最大値は 10〜15 の間になります。負傷ダメージを受けると減少し、吸血によって回復します。
+            </p>
+          </div>
+
+          <div style="background:var(--bg-inner); border:1px solid var(--border); border-radius:6px; padding:1.25rem;">
+            <div style="font-size:0.8rem; text-transform:uppercase; color:var(--gold); font-weight:700; margin-bottom:0.4rem;">最大Willpower（精神力・意志力）</div>
+            <div style="font-size:1.3rem; font-weight:700; color:#fff; font-family:var(--font-serif); margin-bottom:0.4rem;">
+              5 ＋ Composure ＋ Resolve
+            </div>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin:0;">
+              平静＋決意で算出。最大値は 7〜15 の間になります。精神的プレッシャーやパワー発動時に消費されます。
+            </p>
+          </div>
+        </div>
+
+        <ul>
+          <li>
+            <strong>キャラクターの詳細設定</strong>：<br>
+            キャラクターの名前、外見年齢、実年齢、抱擁された年を設定します。さらに、キャラクターが精神的に最も執着し、現代のファッションや話し方に影響を与えている特定の10年間を示す<strong>「Nostalgic Decade（原風景）」</strong>を設定します（例：1990年代のアンダーグラウンド、2010年代の個人主義など）。
+          </li>
+          <li>
+            <strong>欠点（Flaws）の選択</strong>：<br>
+            キャラクターに、ロールプレイをより豊かにし、セッション中に直面した際に経験値（XP）の獲得源となるような「欠点（Flaw）」を必要に応じて設定すれば、あなたのモンスターは完成です！
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+  <p>Vampire: The Masquerade Alpha 1.0 キャラクター作成ガイド（Neonate編）</p>
+  <p style="margin-top: 0.4rem;">
+    <a href="index.html">キャラメイクTOP</a> ｜ 
+    <a href="skills.html">技能一覧</a> ｜ 
+    <a href="natures.html">本性一覧</a> ｜ 
+    <a href="merits.html">長所一覧</a> ｜ 
+    <a href="clan/index.html">選択可能な氏族データ</a>
+  </p>
+</footer>
+</body>
+</html>

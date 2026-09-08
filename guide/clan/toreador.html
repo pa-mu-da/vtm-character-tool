@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>トレアドール (Toreador) - 選択可能な氏族データ</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --clan-theme: #ad1457;
+      --clan-accent: #ec407a;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+  <div class="nav-container">
+    <a href="index.html" class="site-title">
+      <span class="vtm-symbol">☥</span>
+      <span class="title-text">選択可能な氏族データ</span>
+    </a>
+    <ul class="clan-nav-list"><li class="clan-nav-item"><a href="../../index.html" style="color:#ff6b6b; font-weight:bold;">⚔️ キャラシート作成ツール ↗</a></li>
+      <li class="clan-nav-item"><a href="../index.html" style="color:var(--gold);">← キャラメイクTOP</a></li><li class="clan-nav-item"><a href="index.html">氏族一覧</a></li><li class="clan-nav-item"><a href="brujah.html">ブルハ</a></li><li class="clan-nav-item"><a href="gangrel.html">ギャンレル</a></li><li class="clan-nav-item"><a href="lasombra.html">ラソンブラ</a></li><li class="clan-nav-item"><a href="ministry.html">ミニストリー</a></li><li class="clan-nav-item"><a href="nosferatu.html">ノスフェラトゥ</a></li><li class="clan-nav-item active"><a href="toreador.html">トレアドール</a></li><li class="clan-nav-item"><a href="ventrue.html">ヴェントルー</a></li>
+    </ul>
+  </div>
+</header>
+
+  <main class="main-content">
+    <div class="clan-header-card">
+      <div class="clan-title-row">
+        <h1 class="clan-name-ja">トレアドール</h1>
+        <span class="clan-name-en">Toreador</span>
+      </div>
+      <div class="clan-tagline">美は永遠であり、それへの我らの渇望もまた永遠である。</div>
+      <div class="clan-lore">「薔薇の氏族」として知られるトレアドールは、美こそが永遠の命を生きる唯一の価値であると信じています。芸術、情熱、歓喜、そして苦悶のすべてを極限まで感じ取ることによってのみ、不死者が陥る無感動の腐敗を防ぐことができると考えます。彼らは人間と吸血鬼の上流社交界の頂点に君臨し、流行を作り出し、一瞥で他者の評価を天国にも地獄にも落とす審美眼とカリスマを誇ります。</div>
+      <div class="clan-archetypes-badge">
+        <strong>典型的な元人間像:</strong> 前衛芸術家、ファッションデザイナー、スーパーモデル、画廊オーナー、ポップアイドル、辛口の美術批評家
+      </div>
+    </div>
+
+    <div class="traits-grid">
+      <div class="trait-box">
+        <div class="trait-label beast">● 内なる獣の衝動</div>
+        <div class="trait-title">偶像 / 執念深き職人 <span style="font-size:0.85em; color:var(--text-dim);">(Obsessive Artisan)</span></div>
+        <div class="trait-desc">美、完璧さ、圧倒的な感情の高まりに魅了されます。卓越した芸術を創造し、崇高な傑作や感情に触れ、人々からの熱狂的な称賛を浴びることで獣を満たします。</div>
+      </div>
+      <div class="trait-box">
+        <div class="trait-label curse">▲ 氏族の呪い</div>
+        <div class="trait-title">美への飢え <span style="font-size:0.85em; color:var(--text-dim);">(Starved for Beauty)</span></div>
+        <div class="trait-desc">超自然的な美的感受性が極めて過敏です。殺風景、不潔、工業的、または美的優雅さに欠ける環境に置かれると血が衰弱し、全ダイスプールに［世代修正値］分のペナルティを受けます。</div>
+      </div>
+      <div class="trait-box">
+        <div class="trait-label frenzy">◆ 狂乱の性質</div>
+        <div class="trait-title">執着 <span style="font-size:0.85em; color:var(--text-dim);">(Obsession)</span></div>
+        <div class="trait-desc">周囲にある美しい物体、人物、芸術的パフォーマンスに完全に心を奪われ固執します。周囲に美しいものが存在しない場合は、感性を害した下品で醜い要素を破壊しようと激昂します。</div>
+      </div>
+    </div>
+
+    <div class="section-header">
+      <h2 class="section-title">習得可能な訓えとパワー一覧</h2>
+      <div class="filter-controls">
+        <input type="text" id="powerSearch" class="search-input" placeholder="パワー名や効果で検索...">
+      </div>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+      <div class="filter-controls" id="discFilterGroup">
+        <span style="font-size:0.82rem; color:var(--text-dim); margin-right:0.25rem;">訓え:</span>
+        <button class="filter-btn active" data-disc="all">すべての訓え</button><button class="filter-btn" data-disc="オースペクス (予見・霊視)">オースペクス (予見・霊視)</button><button class="filter-btn" data-disc="セレリティ (迅速・疾駆)">セレリティ (迅速・疾駆)</button><button class="filter-btn" data-disc="プレゼンス (威厳・魅了)">プレゼンス (威厳・魅了)</button>
+      </div>
+      <div class="filter-controls" id="dotFilterGroup">
+        <span style="font-size:0.82rem; color:var(--text-dim); margin-right:0.25rem;">レベル:</span>
+        <button class="filter-btn active" data-dot="all">全ドット</button><button class="filter-btn" data-dot="1">1ドット</button><button class="filter-btn" data-dot="2">2ドット</button><button class="filter-btn" data-dot="3">3ドット</button>
+      </div>
+    </div>
+
+    <div class="powers-grid" id="powersGrid">
+      <div class="power-card" data-disc="オースペクス (予見・霊視)" data-dot="1" data-name="解析の眼 (Analyze)" data-summary="物体を精査し、その組成、年代、製作者、扱った人物の履歴を読み取る。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">オースペクス (予見・霊視)</div>
+        <div class="power-name">解析の眼 (Analyze)</div>
+      </div>
+      <div class="power-dots" title="1ドット">●○○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">1-dot Mental Auspex</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">精神: 知力 (Intelligence)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">意志力1点 (1 Willpower)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">接触 (Touch)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">即時 (Instant)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">物体を精査し、その組成、年代、製作者、扱った人物の履歴を読み取る。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">物体に精神を集中して精査することで、その構成物質、正確な年代、製作者、および最近その物体を手に取った人物の痕跡を識別する。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••: 過去の所有者が残した残留思念やサイキックな印象を読み取れる。
+•••••: 製作者がその物体を作った際の感情状態を正確に再現・感知できる。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Examine an object to discern its composition, age, maker, and recent handling history.<br><br>
+      <strong>Maturing:</strong> •••: Discern psychic impressions left by owners.
+•••••: Reconstruct the creator's exact emotional state.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="オースペクス (予見・霊視)" data-dot="1" data-name="五感の研ぎ澄まし (Heightened Senses)" data-summary="視覚、聴覚、嗅覚、触覚の知覚距離と感度を倍増させ、暗視を得る。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">オースペクス (予見・霊視)</div>
+        <div class="power-name">五感の研ぎ澄まし (Heightened Senses)</div>
+      </div>
+      <div class="power-dots" title="1ドット">●○○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">1-dot Mental Auspex</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">精神: 機知 (Wits)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">術者自身 (Self)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">集中維持中 (Sustained)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">視覚、聴覚、嗅覚、触覚の知覚距離と感度を倍増させ、暗視を得る。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">感覚器官を超自然的に拡張し、視覚、聴覚、嗅覚、触覚の範囲と感度を2倍にする。知覚に関する全テストに［オースペクスのドット数］を加える。ほぼ完全な暗黒でも視界を確保できる。</div>
+    </div>
+
+    
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Double the range and sensitivity of your vision, hearing, smell, or touch. Add dots in Auspex to all perception tests. Can see in near-total darkness.<br><br>
+      <strong>Maturing:</strong> None
+    </div>
+  </details>
+</div><div class="power-card" data-disc="オースペクス (予見・霊視)" data-dot="1" data-name="不可視の感知 (Sense the Unseen)" data-summary="不可視の霊体、隠匿（Obfuscate）による偽装、魔法の結界を感知する。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">オースペクス (予見・霊視)</div>
+        <div class="power-name">不可視の感知 (Sense the Unseen)</div>
+      </div>
+      <div class="power-dots" title="1ドット">●○○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">1-dot Mental Auspex</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">精神: 機知 (Wits)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">術者自身 (Self)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">1シーン (One scene)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">不可視の霊体、隠匿（Obfuscate）による偽装、魔法の結界を感知する。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">超自然的な存在、隠匿（Obfuscate）による幻覚や潜伏、霊体、魔法の結界などを感知する。隠匿している相手のドット数とオースペクスのドット数で対抗テストを行う。</div>
+    </div>
+
+    
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Detect the presence of supernatural beings, illusions (Obfuscate), spirits, or magical wards. Contest your Auspex vs Obfuscate dots.<br><br>
+      <strong>Maturing:</strong> None
+    </div>
+  </details>
+</div><div class="power-card" data-disc="オースペクス (予見・霊視)" data-dot="2" data-name="危険予知 (Premonition)" data-summary="直感的な未来の予兆を感じ取り、不意打ちや奇襲を回避する。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">オースペクス (予見・霊視)</div>
+        <div class="power-name">危険予知 (Premonition)</div>
+      </div>
+      <div class="power-dots" title="2ドット">●●○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">2-dot Mental Auspex</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">リアクション (Reaction)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">精神: 機知 (Wits)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">意志力1点 (1 Willpower)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">術者自身 (Self)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">即時 (Instant)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">直感的な未来の予兆を感じ取り、不意打ちや奇襲を回避する。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">危険が訪れる直前に警告の閃きを受け取る。奇襲や不意打ちを回避し、防御テストにボーナスを得るか、STから謎めいた未来の予兆（オメーン）を受け取る。</div>
+    </div>
+
+    
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Receive flashes of danger before it strikes. Avoid being ambushed, gain defense bonuses on surprise attacks, or receive cryptic omens from the Storyteller.<br><br>
+      <strong>Maturing:</strong> None
+    </div>
+  </details>
+</div><div class="power-card" data-disc="オースペクス (予見・霊視)" data-dot="2" data-name="過去視 (Psychometry)" data-summary="物体や場所に触れて、過去の強烈な感情や事件の思念を読み取る。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">オースペクス (予見・霊視)</div>
+        <div class="power-name">過去視 (Psychometry)</div>
+      </div>
+      <div class="power-dots" title="2ドット">●●○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">2-dot Mental Auspex</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">精神: 決意 (Resolve)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">1ヴィータイ (1 Vitae)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">接触 (Touch)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">即時 (Instant)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">物体や場所に触れて、過去の強烈な感情や事件の思念を読み取る。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">物体や場所に触れることで、その場や物体の周囲で過去に発生した最も強烈な感情的出来事のサイキックなビジョンを追体験する。</div>
+    </div>
+
+    
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Touch an object or location to experience intense psychic visions of the strongest emotional events that occurred in its presence.<br><br>
+      <strong>Maturing:</strong> None
+    </div>
+  </details>
+</div><div class="power-card" data-disc="オースペクス (予見・霊視)" data-dot="2" data-name="精神感応 (Telepathy)" data-summary="無言の精神リンクを結び、表面思考の読み取りや念話を行う。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">オースペクス (予見・霊視)</div>
+        <div class="power-name">精神感応 (Telepathy)</div>
+      </div>
+      <div class="power-dots" title="2ドット">●●○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">2-dot Mental Auspex</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">社会: 操作力 (Manipulation)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">意志力1点 (1 Willpower)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">対象の決意 (Target's Resolve)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">視線が通る距離 (Line of sight)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">1シーン (One scene)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">無言の精神リンクを結び、表面思考の読み取りや念話を行う。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">相手の心と精神的リンクを確立し、表面思考を読み取るか、自らの思考を相手の頭脳に直接投影して無言の意思疎通を行う。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••: 相手の深層意識に抑圧された記憶まで読み取ることができる。
+•••••: 同時に最大5人の精神と念話を行うことができる。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Establish a silent mental link to read surface thoughts or project your thoughts into the target's mind.<br><br>
+      <strong>Maturing:</strong> •••: Read deep suppressed memories.
+•••••: Communicate with up to 5 minds simultaneously.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="オースペクス (予見・霊視)" data-dot="3" data-name="千里眼 (Clairvoyance)" data-summary="親しみのある遠隔の場所へ視覚や聴覚を投射して監視する。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">オースペクス (予見・霊視)</div>
+        <div class="power-name">千里眼 (Clairvoyance)</div>
+      </div>
+      <div class="power-dots" title="3ドット">●●●</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">3-dot Mental Auspex</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">精神: 機知/知覚 (Wits/Perception)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">1ヴィータイ (1 Vitae)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">極長距離/都市内 (Extreme)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">1シーン (One scene)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">親しみのある遠隔の場所へ視覚や聴覚を投射して監視する。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">自らの視覚と聴覚を、かつて訪れたことのある都市内の任意の場所へと投射し、あたかもその場に立っているかのように遠隔の状況を観察する。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••••: 大陸を越えた遠方の場所へも感覚を投射できるようになる。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Project your visual and auditory senses to a familiar location anywhere in the city, viewing events as though you were physically standing there.<br><br>
+      <strong>Maturing:</strong> •••••: Can project senses across entire continents.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="オースペクス (予見・霊視)" data-dot="3" data-name="感覚共有 (Share Senses)" data-summary="他者の目や耳を借りて、相手が見聞きしている感覚を共有する。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">オースペクス (予見・霊視)</div>
+        <div class="power-name">感覚共有 (Share Senses)</div>
+      </div>
+      <div class="power-dots" title="3ドット">●●●</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">3-dot Mental Auspex</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">社会: カリスマ (Charisma)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">1ヴィータイ (1 Vitae)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">対象の平静 (Target's Composure)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">視線が通る距離 (Line of sight)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">1シーン (One scene)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">他者の目や耳を借りて、相手が見聞きしている感覚を共有する。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">対象（同意または強制）の感覚を一時的に借り受け、術者の肉体をトランス状態に保ちながら、対象の目を通して見、耳を通して聞く。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••••: 対象の視線や行動を微細に遠隔誘導できるようになる。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Borrow the senses of a willing or unwilling target, seeing through their eyes and hearing through their ears while keeping your body in trance.<br><br>
+      <strong>Maturing:</strong> •••••: Can subtly guide target's gaze and actions.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="セレリティ (迅速・疾駆)" data-dot="1" data-name="猫の身のこなし (Cat's Grace)" data-summary="驚異的な平衡感覚を得て、細い足場や不安定な瓦礫の上を疾走する。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">セレリティ (迅速・疾駆)</div>
+        <div class="power-name">猫の身のこなし (Cat's Grace)</div>
+      </div>
+      <div class="power-dots" title="1ドット">●○○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">1-dot Physical Celerity</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">肉体: 敏捷力 (Dexterity)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">術者自身 (Self)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">1ターン (One turn)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">驚異的な平衡感覚を得て、細い足場や不安定な瓦礫の上を疾走する。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">超自然的なバランス感覚を発揮し、ワイヤーの上、狭い突起、崩れやすい足場の上を一切転落することなく高速で走り抜ける。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••: 短時間であれば垂直な壁面を駆け上がることができる。
+•••••: 水面や液体の表面を沈まずに駆け抜けることができる。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Move with supernatural balance, running across wires, narrow ledges, or unstable debris without falling.<br><br>
+      <strong>Maturing:</strong> •••: Can run across vertical walls for short bursts.
+•••••: Can run across liquids.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="セレリティ (迅速・疾駆)" data-dot="1" data-name="敏捷なる反射 (Rapid Reflexes)" data-summary="神速の反射神経で身を躱し、あらゆる攻撃の防御テストを強化する。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">セレリティ (迅速・疾駆)</div>
+        <div class="power-name">敏捷なる反射 (Rapid Reflexes)</div>
+      </div>
+      <div class="power-dots" title="1ドット">●○○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">1-dot Physical Celerity</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">リアクション (Reaction)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">肉体: 敏捷力 (Dexterity)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">1ヴィータイ (1 Vitae)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">術者自身 (Self)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">1ターン (One turn)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">神速の反射神経で身を躱し、あらゆる攻撃の防御テストを強化する。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">超人的な反射速度で迫り来る攻撃を回避する。あらゆる物理攻撃に対する自身の防御プールに［セレリティのドット数］を加える。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••: 遮蔽物のない状態でも銃弾を回避することができる。
+•••••: 回避した銃弾や投擲物の弾道を逸らして別の方向へ弾くことができる。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Dodge incoming attacks with preternatural speed. Add dots in Celerity to your defense pools against physical attacks.<br><br>
+      <strong>Maturing:</strong> •••: Can dodge bullets without cover.
+•••••: Can redirect missed projectile attacks.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="セレリティ (迅速・疾駆)" data-dot="1" data-name="震動の手 (Vibrating Hands)" data-summary="手を高速振動させ、触れるだけで鍵や固形物を瞬時に粉砕する。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">セレリティ (迅速・疾駆)</div>
+        <div class="power-name">震動の手 (Vibrating Hands)</div>
+      </div>
+      <div class="power-dots" title="1ドット">●○○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">1-dot Physical Celerity</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">肉体: 敏捷力 (Dexterity)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">1ヴィータイ (1 Vitae)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">接触 (Touch)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">即時 (Instant)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">手を高速振動させ、触れるだけで鍵や固形物を瞬時に粉砕する。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">両手を極超音速で振動させ、触れた鍵を破壊し、窓ガラスを粉砕し、コンクリートに亀裂を入れる。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••: 強化鋼鉄製の特殊錠前をも粉砕できる。
+•••••: 装甲化されたエンジンブロックすらも粉々に破壊できる。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Vibrate your hands at hyperspeed to shatter locks, shatter glass, or crack concrete with a single touch.<br><br>
+      <strong>Maturing:</strong> •••: Destroys reinforced steel locks.
+•••••: Can shatter armored engine blocks.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="セレリティ (迅速・疾駆)" data-dot="2" data-name="瞬動 (Blink)" data-summary="目にも留まらぬ速度で移動し、中距離を一瞬で駆け抜ける。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">セレリティ (迅速・疾駆)</div>
+        <div class="power-name">瞬動 (Blink)</div>
+      </div>
+      <div class="power-dots" title="2ドット">●●○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">2-dot Physical Celerity</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">肉体: 敏捷力 (Dexterity)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">1ヴィータイ (1 Vitae)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">術者自身 (Self)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">即時 (Instant)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">目にも留まらぬ速度で移動し、中距離を一瞬で駆け抜ける。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">瞬きの間に中距離（Medium）までの距離を疾走する。目撃者からは、術者がその場から消え去り、一瞬で目的地に現れたように見える。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••: 長距離（Long）までの距離を一瞬で移動できるようになる。
+•••••: 移動時に同行者1人を抱えて共にブリンク移動できる。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Move up to Medium distance in the blink of an eye. Observers see you vanish and reappear instantly.<br><br>
+      <strong>Maturing:</strong> •••: Move up to Long distance.
+•••••: Can carry a passenger while blinking.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="セレリティ (迅速・疾駆)" data-dot="2" data-name="神速の作業 (Rush Job)" data-summary="複雑な手作業（ピッキング、武器組立、捜索等）を数秒で完了する。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">セレリティ (迅速・疾駆)</div>
+        <div class="power-name">神速の作業 (Rush Job)</div>
+      </div>
+      <div class="power-dots" title="2ドット">●●○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">2-dot Mental Celerity</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">精神: 機知 (Wits)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">1ヴィータイ (1 Vitae)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">術者自身 (Self)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">即時 (Instant)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">複雑な手作業（ピッキング、武器組立、捜索等）を数秒で完了する。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">ピッキング、銃器の分解組立、部屋の捜索など、本来なら数分から数十分を要する精密な物理作業を、わずか数秒で完璧に完了させる。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••: 数時間かかる膨大な作業をわずか1分で完了させることができる。
+•••••: 暗号化された複雑な文書を一瞬で解読・筆写できる。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Complete complex manual tasks (picking locks, assembling weapons, searching a room) in mere seconds rather than minutes.<br><br>
+      <strong>Maturing:</strong> •••: Complete hours of work in one minute.
+•••••: Decipher encrypted text in moments.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="セレリティ (迅速・疾駆)" data-dot="2" data-name="優雅なる身のこなし (Willful Grace)" data-summary="軽業・平衡感覚のテストで自動成功を得て、滑らかに移動する。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">セレリティ (迅速・疾駆)</div>
+        <div class="power-name">優雅なる身のこなし (Willful Grace)</div>
+      </div>
+      <div class="power-dots" title="2ドット">●●○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">2-dot Physical Celerity</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">肉体: 敏捷力 (Dexterity)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">意志力1点 (1 Willpower)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">術者自身 (Self)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">1シーン (One scene)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">軽業・平衡感覚のテストで自動成功を得て、滑らかに移動する。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">アクロバット、敏捷性、平衡感覚に関するテストで自動成功を獲得し、あらゆる悪路や危険な地形を一切の滞りなく優雅に滑走する。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••: 転倒（足払い）や組み付き攻撃に対して完全な耐性を得る。
+•••••: 莫大な距離を羽毛のように軽々と跳躍できる。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Gain automatic successes on acrobatics, agility, and balance tests, gliding effortlessly through hazardous terrain.<br><br>
+      <strong>Maturing:</strong> •••: Immune to being tripped or grappled.
+•••••: Can leap enormous distances effortlessly.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="セレリティ (迅速・疾駆)" data-dot="3" data-name="残像の突破 (Blurred Passage)" data-summary="分子レベルで肉体を高速振動させ、壁や扉をすり抜ける。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">セレリティ (迅速・疾駆)</div>
+        <div class="power-name">残像の突破 (Blurred Passage)</div>
+      </div>
+      <div class="power-dots" title="3ドット">●●●</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">3-dot Physical Celerity</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">肉体: 敏捷力 (Dexterity)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">2ヴィータイ (2 Vitae)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">術者自身 (Self)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">即時 (Instant)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">分子レベルで肉体を高速振動させ、壁や扉をすり抜ける。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">肉体の分子振動を極限まで加速させることで、固体の壁や強固な扉を傷つけることなくそのまま通り抜ける。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••••: 銀行の金庫扉のような軍事規格の強化装甲壁をもすり抜けられる。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Vibrate your molecules so fast that you phase through a solid wall or door without damage.<br><br>
+      <strong>Maturing:</strong> •••••: Can phase through bank-grade reinforced barriers.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="セレリティ (迅速・疾駆)" data-dot="3" data-name="闘士の捷速 (Fighter's Alacrity)" data-summary="1戦闘ラウンド中に2回分の完全な手番を行い、連続行動する。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">セレリティ (迅速・疾駆)</div>
+        <div class="power-name">闘士の捷速 (Fighter's Alacrity)</div>
+      </div>
+      <div class="power-dots" title="3ドット">●●●</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">3-dot Physical Celerity</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">肉体: 敏捷力 (Dexterity)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">2ヴィータイ (2 Vitae)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">術者自身 (Self)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">1ターン (One turn)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">1戦闘ラウンド中に2回分の完全な手番を行い、連続行動する。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">他者が反応する隙を与えず、1つの戦闘ラウンド中に完全な2回の手番（移動およびアクション）を実行する。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••••: 1戦闘ラウンド中に3回分の完全な手番を実行可能になる。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Take two full turns in a single combat round, moving and attacking before others can react.<br><br>
+      <strong>Maturing:</strong> •••••: Take three full turns in a combat round.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="プレゼンス (威厳・魅了)" data-dot="1" data-name="畏怖のオーラ (Awe)" data-summary="圧倒的なカリスマを放ち、周囲の者を魅了して反抗心を奪う。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">プレゼンス (威厳・魅了)</div>
+        <div class="power-name">畏怖のオーラ (Awe)</div>
+      </div>
+      <div class="power-dots" title="1ドット">●○○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">1-dot Social Presence</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">社会: カリスマ (Charisma)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">対象の平静 (Target's Composure)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">近距離 (Near)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">1シーン (One scene)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">圧倒的なカリスマを放ち、周囲の者を魅了して反抗心を奪う。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">強烈な超自然的オーラを放ち、周囲の視線と関心を一身に集める。目撃者は術者の魅力に心を奪われ、発言の一言一句に聞き惚れて敵対心を失う。</div>
+    </div>
+
+    
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Radiate intense supernatural allure. Onlookers are captivated, hanging on your every word.<br><br>
+      <strong>Maturing:</strong> None
+    </div>
+  </details>
+</div><div class="power-card" data-disc="プレゼンス (威厳・魅了)" data-dot="1" data-name="威圧の眼差し (Dread Gaze)" data-summary="捕食者の威容を眼差しで示し、対象を恐怖に震え上がらせて逃走させる。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">プレゼンス (威厳・魅了)</div>
+        <div class="power-name">威圧の眼差し (Dread Gaze)</div>
+      </div>
+      <div class="power-dots" title="1ドット">●○○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">1-dot Social Presence</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">社会: カリスマ (Charisma)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">対象の平静 (Target's Composure)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">視線が通る距離 (Line of sight)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">1シーン (One scene)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">捕食者の威容を眼差しで示し、対象を恐怖に震え上がらせて逃走させる。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">魂の奥底に潜む恐るべき怪物の本質を一瞥によって露わにし、指定した対象を盲目的な恐怖に陥れてその場から逃走させる。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••: 対象が恐怖のあまりその場に硬直・麻痺する。
+•••••: 対象が恐怖で失神するか、心停止ショックを起こす。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Reveal the monstrous predator within your soul, sending a chosen target fleeing in blind terror.<br><br>
+      <strong>Maturing:</strong> •••: Target is paralyzed with dread.
+•••••: Target faints or suffers heart attack.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="プレゼンス (威厳・魅了)" data-dot="1" data-name="情動の増幅 (Impassion)" data-summary="対象の特定の感情（怒り、愛欲、悲哀、狂喜等）を強烈に煽り立てる。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">プレゼンス (威厳・魅了)</div>
+        <div class="power-name">情動の増幅 (Impassion)</div>
+      </div>
+      <div class="power-dots" title="1ドット">●○○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">1-dot Social Presence</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">社会: カリスマ (Charisma)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">1ヴィータイ (1 Vitae)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">対象の平静 (Target's Composure)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">近距離 (Near)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">1シーン (One scene)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">対象の特定の感情（怒り、愛欲、悲哀、狂喜等）を強烈に煽り立てる。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">対象の特定の感情（激怒、情欲、悲嘆、歓喜など）を増幅・刺激し、理性を失わせて衝動的な行動へと駆り立てる。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••: 単一の対象だけでなく、群衆全体に感情を波及させる。
+•••••: 対象を狂信的な行動へと駆り立てる。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Amplify a specific emotion (rage, lust, grief, joy) in a target, driving them to erratic behavior.<br><br>
+      <strong>Maturing:</strong> •••: Affects crowds.
+•••••: Drives target to fanatical action.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="プレゼンス (威厳・魅了)" data-dot="2" data-name="魅惑の視線 (Captivating Gaze)" data-summary="強烈な見つめ合いで対象をその場に硬直させ、発言や行動を封じる。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">プレゼンス (威厳・魅了)</div>
+        <div class="power-name">魅惑の視線 (Captivating Gaze)</div>
+      </div>
+      <div class="power-dots" title="2ドット">●●○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">2-dot Social Presence</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">社会: カリスマ (Charisma)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">1ヴィータイ (1 Vitae)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">対象の決意 (Target's Resolve)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">アイコンタクト/目を合わせた状態 (Eye contact)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">集中維持中 (Sustained)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">強烈な見つめ合いで対象をその場に硬直させ、発言や行動を封じる。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">対象と視線を交差させ、その場に釘付けにする。術者が視線を維持している限り、対象は一歩も動けず、声を発することもできない。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••: 簡単な手招きや身振りによって対象を誘導できる。
+•••••: 対象を深い催眠トランス状態に沈め込む。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Lock eyes with a victim, freezing them in place. They cannot move or speak as long as you maintain eye contact.<br><br>
+      <strong>Maturing:</strong> •••: Target obeys simple hand gestures.
+•••••: Target falls into deep trance.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="プレゼンス (威厳・魅了)" data-dot="2" data-name="平穏の回復 (Compose Yourself)" data-summary="触れた味方の恐怖や狂乱を瞬時に鎮め、冷静さを取り戻させる。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">プレゼンス (威厳・魅了)</div>
+        <div class="power-name">平穏の回復 (Compose Yourself)</div>
+      </div>
+      <div class="power-dots" title="2ドット">●●○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">2-dot Social Presence</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">社会: カリスマ (Charisma)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">意志力1点 (1 Willpower)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">接触 (Touch)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">1シーン (One scene)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">触れた味方の恐怖や狂乱を瞬時に鎮め、冷静さを取り戻させる。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">味方に手を触れることで、恐怖狂乱や激怒狂乱に陥っている対象を即座に正気に引き戻し、平穏と自制心を回復させる。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••: 人間に超自然的な勇気と平穏を植え付ける。
+•••••: 失われた意志力（Willpower）を回復させる。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Touch an ally to immediately snap them out of terror or frenzy, restoring their calm and composure.<br><br>
+      <strong>Maturing:</strong> •••: Instills unnatural bravery in mortals.
+•••••: Restores lost Willpower.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="プレゼンス (威厳・魅了)" data-dot="2" data-name="残留する存在感 (Lingering Presence)" data-summary="部屋や場所に畏怖や魅了のオーラを刻印し、退室後も影響を与える。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">プレゼンス (威厳・魅了)</div>
+        <div class="power-name">残留する存在感 (Lingering Presence)</div>
+      </div>
+      <div class="power-dots" title="2ドット">●●○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">2-dot Social Presence</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">社会: 操作力 (Manipulation)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">1ヴィータイ (1 Vitae)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">接触 (Touch)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">1夜 (One night)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">部屋や場所に畏怖や魅了のオーラを刻印し、退室後も影響を与える。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">退室後も長時間にわたり、自らのカリスマや恐怖の残留オーラをその場所に残し、足を踏み入れた者に影響を与える。</div>
+    </div>
+
+    
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Leave an aura of awe or fear in a room that affects anyone who enters hours after you leave.<br><br>
+      <strong>Maturing:</strong> None
+    </div>
+  </details>
+</div><div class="power-card" data-disc="プレゼンス (威厳・魅了)" data-dot="3" data-name="心酔 (Entrancement)" data-summary="対象を熱狂的な崇拝者に仕立て上げ、喜んで命令を聞き入れさせる。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">プレゼンス (威厳・魅了)</div>
+        <div class="power-name">心酔 (Entrancement)</div>
+      </div>
+      <div class="power-dots" title="3ドット">●●●</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">3-dot Social Presence</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">社会: カリスマ (Charisma)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">2ヴィータイ (2 Vitae)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">対象の決意 (Target's Resolve)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">視線が通る距離 (Line of sight)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">1夜 (One night)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">対象を熱狂的な崇拝者に仕立て上げ、喜んで命令を聞き入れさせる。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">対象の心を深く魅了し、術者を最も敬愛する存在として信奉させる。対象は術者からのあらゆる願いや要求を喜んで実行する。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••••: 効果が数週間から数ヶ月間にわたって持続する。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Enthrall a subject so deeply that they regard you as their most beloved idol, obeying requests gladly.<br><br>
+      <strong>Maturing:</strong> •••••: Lasts for weeks or months.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="プレゼンス (威厳・魅了)" data-dot="3" data-name="威風堂々 (Majesty)" data-summary="神のごとき威厳を放ち、何者も攻撃や侮辱を行えないように屈服させる。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">プレゼンス (威厳・魅了)</div>
+        <div class="power-name">威風堂々 (Majesty)</div>
+      </div>
+      <div class="power-dots" title="3ドット">●●●</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">3-dot Social Presence</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">社会: カリスマ (Charisma)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">2ヴィータイ (2 Vitae)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">対象の決意 (Target's Resolve)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">近距離 (Near)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">1シーン (One scene)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">神のごとき威厳を放ち、何者も攻撃や侮辱を行えないように屈服させる。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">超越的かつ恐るべき神性のオーラを身に纏う。圧倒的な畏怖を克服するテストに成功しない限り、何者も術者を攻撃したり侮辱したりすることができない。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••••: 人間がその場にひれ伏して平伏する。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Assume an aura of transcendent, terrible divinity. No one can attack or insult you without overcoming crushing awe.<br><br>
+      <strong>Maturing:</strong> •••••: Mortals fall prostrate on the ground.
+    </div>
+  </details>
+</div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+  <p>選択可能な氏族データ</p>
+</footer>
+
+  <script src="clan.js"></script>
+</body>
+</html>

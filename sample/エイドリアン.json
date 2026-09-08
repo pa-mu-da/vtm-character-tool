@@ -1,0 +1,155 @@
+{
+  "name": "エイドリアン",
+  "memo": "〈1950年代のイケてる男子、ハリウッド黄金時代の主演男優〉\nエイドリアンは、外見年齢21歳、実年齢90歳の、トレアドールの吸血鬼である。1957年の秋に〈抱擁〉を受けている。彼の原風景は1950年代のアメリカ、およびその時代の古き良きアメリカ文化（1950s Americana）にある。\n\n所持品:ショットガン(重火器/4ダメージ/中距離まで)、「エイドリアン・ジェニング IV」のIDカード,ペントハウスの鍵,映画俳優組合のメンバーシップカード",
+  "clan": "Toreador",
+  "disciplines": [
+    {
+      "name": "Auspex",
+      "dots": 1,
+      "powers": [
+        {
+          "name": "Heightened Senses",
+          "description": "五感を極限まで研ぎ澄まし、聴覚・視覚・嗅覚の有効範囲を通常の2倍にする。シーン終了まで知覚（Awareness）および調査（Investigation）判定にこの訓えのドット数に等しいボーナスを得る。激しい騒音や強い光、悪臭にさらされると感覚過負荷によるペナルティを受ける場合がある。"
+        }
+      ]
+    },
+    {
+      "name": "Celerity",
+      "dots": 1,
+      "powers": [
+        {
+          "name": "Cat's Grace",
+          "description": "狭い縁やワイヤー、崩れかけた足場の上を難なく歩き、あるいは走ることができる。細い足場や不安定な場所を移動する際の敏捷判定に自動成功する。"
+        }
+      ]
+    },
+    {
+      "name": "Presence",
+      "dots": 2,
+      "powers": [
+        {
+          "name": "Impassion",
+          "description": "短距離内にいる見えている対象1体の感情を超自然的に操作し、指定した感情を強く抱かせる。抵抗（自制）判定に失敗した対象は［感情］状態となり、その情動に従って行動を左右される。"
+        },
+        {
+          "name": "Redirect Desire",
+          "description": "対象の欲望や衝動の矛先を別の目標や自身へと逸らし、強く惹きつける。対象の執着を操作して行動を誘導する。"
+        }
+      ]
+    }
+  ],
+  "curse": "美への飢え",
+  "curseDescription": "息を呑むような美に出会うとトランス状態に陥り、身動きが取れなくなる。",
+  "frenzy": "執着",
+  "frenzyDescription": "美を損なう者への激しい怒りや、美しき対象を独占・奪取しようと暴走する。",
+  "attributes": {
+    "strength": 3,
+    "dexterity": 2,
+    "stamina": 3,
+    "charisma": 4,
+    "manipulation": 3,
+    "composure": 3,
+    "intelligence": 2,
+    "wits": 2,
+    "resolve": 2
+  },
+  "skills": {
+    "Athletics": {
+      "dots": 2,
+      "focuses": "重量挙げ"
+    },
+    "Awareness": {
+      "dots": 3,
+      "focuses": "洞察,共感"
+    },
+    "Craft": {
+      "dots": 2,
+      "focuses": "衣装"
+    },
+    "Expression": {
+      "dots": 1,
+      "focuses": "演技"
+    },
+    "Fighting": {
+      "dots": 2,
+      "focuses": "素手格闘"
+    },
+    "Investigation": {
+      "dots": 2,
+      "focuses": "ゴシップ"
+    },
+    "Knowledge": {
+      "dots": 0,
+      "focuses": ""
+    },
+    "Medicine": {
+      "dots": 0,
+      "focuses": ""
+    },
+    "Persuasion": {
+      "dots": 3,
+      "focuses": "交渉,誘惑"
+    },
+    "Sabotage": {
+      "dots": 0,
+      "focuses": ""
+    },
+    "Shooting": {
+      "dots": 2,
+      "focuses": "重火器"
+    },
+    "Subterfuge": {
+      "dots": 0,
+      "focuses": ""
+    },
+    "Survival": {
+      "dots": 1,
+      "focuses": "都市追跡"
+    }
+  },
+  "resources": [
+    {
+      "category": "Wealth",
+      "detail": "",
+      "dots": 3
+    },
+    {
+      "category": "Ally",
+      "detail": "パトロン",
+      "dots": 1
+    },
+    {
+      "category": "Ally",
+      "detail": "戦友",
+      "dots": 2
+    },
+    {
+      "category": "Contact",
+      "detail": "軍情報部",
+      "dots": 1
+    },
+    {
+      "category": "Haven",
+      "detail": "ペントハウス",
+      "dots": 2
+    }
+  ],
+  "lifepaths": [
+    "Artist",
+    "Military"
+  ],
+  "merits": [
+    "Enchanting Presence"
+  ],
+  "flaws": [
+    "プライド:お世辞に弱く、おだてられやすい。"
+  ],
+  "nature": "Gallant",
+  "natureDescription": "注目を集め、華麗に振る舞い、周囲の称賛を求める本性。",
+  "beast": "偶像",
+  "beastDescription": "自らが称賛と崇拝の的であることを求め、無関心に耐えられない内なる衝動。",
+  "generation": "13th",
+  "generationModifier": 1,
+  "sire": "Caring Sire",
+  "imageUrl": null
+}

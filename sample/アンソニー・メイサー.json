@@ -1,0 +1,150 @@
+{
+  "name": "アンソニー・メイサー",
+  "memo": "〈異教徒に改宗を迫る傲慢な牧師〉\nアンソニー・メイサーは、外見年齢42歳、実年齢70歳の、ミニストリーの吸血鬼である。1998年の夏に〈抱擁〉を受けている。彼の原風景は1990年代のアメリカ、もとい、その時代に熱心に行われたプロテスタント教会の拡大運動にある。\n\n所持品:拳銃(軽火器/2ダメージ/中距離まで),「アンソニー・メイサー」のIDカード,聖書(特別版)",
+  "clan": "Ministry",
+  "disciplines": [
+    {
+      "name": "Corruption",
+      "dots": 2,
+      "powers": [
+        {
+          "name": "Self Doubt",
+          "description": "言葉や視線を通じて対象の心に自己不信の種を植え付ける。対象は自身の能力や判断に深い疑念を抱き、次のテストにダイスペナルティを受ける。"
+        },
+        {
+          "name": "Dark Secrets",
+          "description": "他者の心に潜む暗い秘密や罪悪感、抑圧された欲望を探り出し、白日の下に晒して精神的に追い詰める。"
+        }
+      ]
+    },
+    {
+      "name": "Obfuscate",
+      "dots": 1,
+      "powers": [
+        {
+          "name": "Conceal",
+          "description": "手にした物品や小物を周囲の知覚から不可視化して隠蔽する。身体検査や捜索を受けても発見されなくなる。"
+        }
+      ]
+    },
+    {
+      "name": "Presence",
+      "dots": 1,
+      "powers": [
+        {
+          "name": "Dread Gaze",
+          "description": "恐るべき視線で睨みつけた対象を恐怖で竦ませる。対象が自身を見ている間、対象のすべてのテストに-1ダイスペナルティを与える。"
+        }
+      ]
+    }
+  ],
+  "curse": "陽光の禍",
+  "curseDescription": "日光に対する脆弱性が他氏族より重く、強い光の下では苦痛と衰弱を覚える。",
+  "frenzy": "背徳",
+  "frenzyDescription": "他者の信仰や美徳を破壊し、禁忌や堕落へと引きずり込もうとする。",
+  "attributes": {
+    "strength": 1,
+    "dexterity": 2,
+    "stamina": 3,
+    "charisma": 4,
+    "manipulation": 3,
+    "composure": 3,
+    "intelligence": 4,
+    "wits": 1,
+    "resolve": 3
+  },
+  "skills": {
+    "Athletics": {
+      "dots": 1,
+      "focuses": "走法"
+    },
+    "Awareness": {
+      "dots": 3,
+      "focuses": "共感,洞察"
+    },
+    "Craft": {
+      "dots": 0,
+      "focuses": ""
+    },
+    "Expression": {
+      "dots": 1,
+      "focuses": "雄弁"
+    },
+    "Fighting": {
+      "dots": 0,
+      "focuses": ""
+    },
+    "Investigation": {
+      "dots": 2,
+      "focuses": "物理メディア"
+    },
+    "Knowledge": {
+      "dots": 3,
+      "focuses": "宗教,オカルト"
+    },
+    "Medicine": {
+      "dots": 1,
+      "focuses": "応急手当"
+    },
+    "Persuasion": {
+      "dots": 3,
+      "focuses": "脅迫,誘引"
+    },
+    "Sabotage": {
+      "dots": 0,
+      "focuses": ""
+    },
+    "Shooting": {
+      "dots": 2,
+      "focuses": "軽火器"
+    },
+    "Subterfuge": {
+      "dots": 2,
+      "focuses": "隠密"
+    },
+    "Survival": {
+      "dots": 0,
+      "focuses": ""
+    }
+  },
+  "resources": [
+    {
+      "category": "Status",
+      "detail": "教会",
+      "dots": 2
+    },
+    {
+      "category": "Wealth",
+      "detail": "",
+      "dots": 3
+    },
+    {
+      "category": "Contact",
+      "detail": "血液鑑定家",
+      "dots": 2
+    },
+    {
+      "category": "Vehicle",
+      "detail": "自動車",
+      "dots": 2
+    }
+  ],
+  "lifepaths": [
+    "Blood Deliverer",
+    "Holy Person"
+  ],
+  "merits": [
+    "Subdued Hunger"
+  ],
+  "flaws": [
+    "虚栄心:あなたは自分の外見に夢中になっており、完璧に見えるようにするために必要以上に時間を費やす。"
+  ],
+  "nature": "Bon Vivant",
+  "natureDescription": "快楽、刺激、今この瞬間の楽しみを最大限に味わおうとする本性。",
+  "beast": "誘惑者",
+  "beastDescription": "人の心の隙や欲望につけ込み、魂を堕落させようと囁く内なる衝動。",
+  "generation": "13th",
+  "generationModifier": 1,
+  "sire": "Secretive Sire",
+  "imageUrl": null
+}

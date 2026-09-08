@@ -1,0 +1,2053 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ラソンブラ (Lasombra) - 選択可能な氏族データ</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --clan-theme: #4a148c;
+      --clan-accent: #9c27b0;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+  <div class="nav-container">
+    <a href="index.html" class="site-title">
+      <span class="vtm-symbol">☥</span>
+      <span class="title-text">選択可能な氏族データ</span>
+    </a>
+    <ul class="clan-nav-list"><li class="clan-nav-item"><a href="../../index.html" style="color:#ff6b6b; font-weight:bold;">⚔️ キャラシート作成ツール ↗</a></li>
+      <li class="clan-nav-item"><a href="../index.html" style="color:var(--gold);">← キャラメイクTOP</a></li><li class="clan-nav-item"><a href="index.html">氏族一覧</a></li><li class="clan-nav-item"><a href="brujah.html">ブルハ</a></li><li class="clan-nav-item"><a href="gangrel.html">ギャンレル</a></li><li class="clan-nav-item active"><a href="lasombra.html">ラソンブラ</a></li><li class="clan-nav-item"><a href="ministry.html">ミニストリー</a></li><li class="clan-nav-item"><a href="nosferatu.html">ノスフェラトゥ</a></li><li class="clan-nav-item"><a href="toreador.html">トレアドール</a></li><li class="clan-nav-item"><a href="ventrue.html">ヴェントルー</a></li>
+    </ul>
+  </div>
+</header>
+
+  <main class="main-content">
+    <div class="clan-header-card">
+      <div class="clan-title-row">
+        <h1 class="clan-name-ja">ラソンブラ</h1>
+        <span class="clan-name-en">Lasombra</span>
+      </div>
+      <div class="clan-tagline">影が世界を覆うとき、我らが世界を支配する。</div>
+      <div class="clan-lore">ラソンブラは、世界はそれを支配する強い意志を持つ者のものであり、力とは与えられるものではなく冷徹な決意と闇の支配によって奪い取るものだと確信しています。彼らにとってあらゆる会議場や宮廷はチェス盤であり、劣る者は犠牲にされるべき駒にすぎません。極限の試練を生き残った強者のみを同胞として認めます。影そのものを物理的に操る能力や、他者の精神を絶対的に屈服させる技術に長けています。</div>
+      <div class="clan-archetypes-badge">
+        <strong>典型的な元人間像:</strong> 冷酷な企業CEO、腐敗した聖職者、容赦なき社交界の黒幕、失脚した政治家、カルテルのフィクサー
+      </div>
+    </div>
+
+    <div class="traits-grid">
+      <div class="trait-box">
+        <div class="trait-label beast">● 内なる獣の衝動</div>
+        <div class="trait-title">処罰者 / 容赦なき野心 <span style="font-size:0.85em; color:var(--text-dim);">(Ruthless Ambition)</span></div>
+        <div class="trait-desc">他者への絶対的勝利とライバルの屈服を渇望します。競争相手を罠に嵌め、支配権を誇示し、権力への道を阻む者を排除することで獣を満たします。</div>
+      </div>
+      <div class="trait-box">
+        <div class="trait-label curse">▲ 氏族の呪い</div>
+        <div class="trait-title">影の顕現 / 反射の歪み <span style="font-size:0.85em; color:var(--text-dim);">(Shadow Cast / Reflectionless)</span></div>
+        <div class="trait-desc">鏡やカメラ、反射面に姿が正しく映らず、蠢く影や歪んだノイズになります。音声機器でも声が不気味に歪み、強い光や聖別された場所では超自然の露見難易度が［世代修正値］分上昇します。</div>
+      </div>
+      <div class="trait-box">
+        <div class="trait-label frenzy">◆ 狂乱の性質</div>
+        <div class="trait-title">冷酷 / 無情 <span style="font-size:0.85em; color:var(--text-dim);">(Ruthlessness)</span></div>
+        <div class="trait-desc">冷徹で残忍な破壊衝動に駆られます。自分を挑発したり権威に逆らった者を徹底的に叩き潰し、味方や資産の犠牲をも顧みずに完全な屈服を強要します。</div>
+      </div>
+    </div>
+
+    <div class="section-header">
+      <h2 class="section-title">習得可能な訓えとパワー一覧</h2>
+      <div class="filter-controls">
+        <input type="text" id="powerSearch" class="search-input" placeholder="パワー名や効果で検索...">
+      </div>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+      <div class="filter-controls" id="discFilterGroup">
+        <span style="font-size:0.82rem; color:var(--text-dim); margin-right:0.25rem;">訓え:</span>
+        <button class="filter-btn active" data-disc="all">すべての訓え</button><button class="filter-btn" data-disc="オブリビオン (忘却・深淵)">オブリビオン (忘却・深淵)</button><button class="filter-btn" data-disc="コラプション (堕落・誘惑)">コラプション (堕落・誘惑)</button><button class="filter-btn" data-disc="ドミネイト (支配・威圧)">ドミネイト (支配・威圧)</button><button class="filter-btn" data-disc="ポウテンス (怪力・剛力)">ポウテンス (怪力・剛力)</button>
+      </div>
+      <div class="filter-controls" id="dotFilterGroup">
+        <span style="font-size:0.82rem; color:var(--text-dim); margin-right:0.25rem;">レベル:</span>
+        <button class="filter-btn active" data-dot="all">全ドット</button><button class="filter-btn" data-dot="1">1ドット</button><button class="filter-btn" data-dot="2">2ドット</button><button class="filter-btn" data-dot="3">3ドット</button>
+      </div>
+    </div>
+
+    <div class="powers-grid" id="powersGrid">
+      <div class="power-card" data-disc="コラプション (堕落・誘惑)" data-dot="1" data-name="矛盾の囁き (Contradict)" data-summary="疑念の囁きで対象の予定していた行動を正反対のものへと覆す。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">コラプション (堕落・誘惑)</div>
+        <div class="power-name">矛盾の囁き (Contradict)</div>
+      </div>
+      <div class="power-dots" title="1ドット">●○○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">1-dot Social Corruption</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">社会: 操作力 (Manipulation)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">1ヴィータイ (1 Vitae)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">対象の平静 (Target's Composure)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">近距離 (Near)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">1ターン (One turn)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">疑念の囁きで対象の予定していた行動を正反対のものへと覆す。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">相手の心に微細な疑念を囁きかけ、対象がその手番で予定していた意図や行動とは正反対のことを強制的に行わせる。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••: 同時に複数の対象に影響を与えることができる。
+•••••: 対象を操り、その味方を攻撃させることができる。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Whisper a subtle doubt that forces the target to do the opposite of what they planned for their turn.<br><br>
+      <strong>Maturing:</strong> •••: Affects multiple targets.
+•••••: Forces target to attack their ally.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="コラプション (堕落・誘惑)" data-dot="1" data-name="悪夢の幻視 (Nightmare Glimpses)" data-summary="対象の最悪の恐怖を幻視させ、強烈な恐怖と躊躇を植え付ける。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">コラプション (堕落・誘惑)</div>
+        <div class="power-name">悪夢の幻視 (Nightmare Glimpses)</div>
+      </div>
+      <div class="power-dots" title="1ドット">●○○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">1-dot Mental Corruption</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">社会: 操作力 (Manipulation)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">意志力1点 (1 Willpower)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">対象の決意 (Target's Resolve)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">近距離 (Near)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">即時 (Instant)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">対象の最悪の恐怖を幻視させ、強烈な恐怖と躊躇を植え付ける。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">対象の心の奥底にある最も根源的な恐怖の幻覚を見せつけ、パニックに陥らせて行動を躊躇・中断させる。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••: パニックに陥った対象が所持品をその場に投げ出してしまう。
+•••••: 対象を恐怖による完全な麻痺状態に陥れる。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Cause the target to see horrifying visions of their deepest fears, inflicting terror and hesitation.<br><br>
+      <strong>Maturing:</strong> •••: Target drops items in panic.
+•••••: Target suffers paralyzing terror.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="コラプション (堕落・誘惑)" data-dot="1" data-name="自己疑念 (Self Doubt)" data-summary="壊滅的な自己不信を植え付け、対象のテストにペナルティを与える。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">コラプション (堕落・誘惑)</div>
+        <div class="power-name">自己疑念 (Self Doubt)</div>
+      </div>
+      <div class="power-dots" title="1ドット">●○○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">1-dot Social Corruption</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">社会: 操作力 (Manipulation)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">対象の平静 (Target's Composure)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">近距離 (Near)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">1シーン (One scene)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">壊滅的な自己不信を植え付け、対象のテストにペナルティを与える。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">対象の心に強烈な劣等感と自己不信を植え付け、持続時間中、対象のあらゆるテストに［コラプションのドット数］に等しいダイスペナルティを課す。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••: 声の届く範囲にいる対象の味方全員にもペナルティが適用される。
+•••••: 交渉において対象が即座に白旗を揚げて屈服する。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Inflict crushing self-doubt on a target, imposing a dice penalty to their tests equal to your Corruption dots.<br><br>
+      <strong>Maturing:</strong> •••: Penalty applies to all allies within earshot.
+•••••: Target yields immediately in negotiation.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="コラプション (堕落・誘惑)" data-dot="2" data-name="永続する呪詛 (Lingering Curse)" data-summary="超自然的な不運を刻み込み、判定失敗時に破滅的結果を招かせる。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">コラプション (堕落・誘惑)</div>
+        <div class="power-name">永続する呪詛 (Lingering Curse)</div>
+      </div>
+      <div class="power-dots" title="2ドット">●●○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">2-dot Social Corruption</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">社会: 操作力 (Manipulation)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">1ヴィータイ (1 Vitae)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">対象の決意 (Target's Resolve)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">接触 (Touch)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">1夜 (One night)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">超自然的な不運を刻み込み、判定失敗時に破滅的結果を招かせる。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">対象に災厄の呪いを付与する。対象が判定でファンブル（致命的失敗）を出した際、その結果が壊滅的な大惨事へと発展する。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••: 呪いの効果が1週間にわたって持続する。
+•••••: 呪いの効果が1ヶ月間にわたって持続する。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Afflict target with supernatural bad luck; whenever they roll a critical failure, the consequences are disastrous.<br><br>
+      <strong>Maturing:</strong> •••: Lasts for a week.
+•••••: Lasts for a month.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="コラプション (堕落・誘惑)" data-dot="2" data-name="蛇の誘惑 (Serpent's Seduction)" data-summary="対象の抑圧された罪深い欲望を呼び覚まし、誘惑に屈服させる。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">コラプション (堕落・誘惑)</div>
+        <div class="power-name">蛇の誘惑 (Serpent's Seduction)</div>
+      </div>
+      <div class="power-dots" title="2ドット">●●○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">2-dot Social Corruption</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">社会: カリスマ (Charisma)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">1ヴィータイ (1 Vitae)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">対象の平静 (Target's Composure)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">視線が通る距離 (Line of sight)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">1シーン (One scene)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">対象の抑圧された罪深い欲望を呼び覚まし、誘惑に屈服させる。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">対象の心の奥底に潜む最も暗い罪悪感や悪徳の欲望をかき立て、自制心を奪って欲望に身を委ねさせる。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••: 対象が欲望を満たすために重犯罪に走るようになる。
+•••••: 対象が術者の愛顧と指示に完全に依存・中毒する。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Stir the deepest sinful desire in a target, making them helpless against indulgence.<br><br>
+      <strong>Maturing:</strong> •••: Target commits crime to satisfy craving.
+•••••: Target becomes completely addicted to your favor.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="コラプション (堕落・誘惑)" data-dot="2" data-name="猛毒の血 (Venomous Blood)" data-summary="自身の血液を強酸性の猛毒に変え、攻撃者に破滅的ダメージを与える。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">コラプション (堕落・誘惑)</div>
+        <div class="power-name">猛毒の血 (Venomous Blood)</div>
+      </div>
+      <div class="power-dots" title="2ドット">●●○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">2-dot Physical Corruption</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">リアクション (Reaction)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">肉体: 持久力 (Stamina)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">1ヴィータイ (1 Vitae)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">対象の持久力 (Target's Stamina)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">術者自身 (Self)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">1シーン (One scene)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">自身の血液を強酸性の猛毒に変え、攻撃者に破滅的ダメージを与える。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">噛みつかれたり肉体を傷つけられた際、傷口から流れる血液が強酸と猛毒を帯びて肉を焼き、攻撃者に破滅的（Aggravated）ダメージを与える。</div>
+    </div>
+
+    
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> When bitten or cut, your blood burns flesh and corrodes weapons, dealing Aggravated damage to attackers.<br><br>
+      <strong>Maturing:</strong> None
+    </div>
+  </details>
+</div><div class="power-card" data-disc="コラプション (堕落・誘惑)" data-dot="3" data-name="コブラの形態 (Form of the Cobra)" data-summary="毒牙と催眠の眼差しを持つ巨大な黒コブラへと変身する。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">コラプション (堕落・誘惑)</div>
+        <div class="power-name">コブラの形態 (Form of the Cobra)</div>
+      </div>
+      <div class="power-dots" title="3ドット">●●●</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">3-dot Physical Corruption</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">肉体: 持久力 (Stamina)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">2ヴィータイ (2 Vitae)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">術者自身 (Self)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">1シーン (One scene)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">毒牙と催眠の眼差しを持つ巨大な黒コブラへと変身する。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">自身の肉体を、猛毒の牙、硬質な鱗の装甲、そして催眠的な眼差しを持つ巨大な黒コブラへと変化させる。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••••: 毒蛇の大群（スウォーム）へと変身・分散できるようになる。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Your flesh transforms into a giant black cobra with venomous fangs, armored scales, and hypnotic gaze.<br><br>
+      <strong>Maturing:</strong> •••••: Can transform into a swarm of vipers.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="コラプション (堕落・誘惑)" data-dot="3" data-name="魂の引き裂き (Tear the Soul)" data-summary="対象の精神防御を粉砕し、意志力を根こそぎ奪い去る。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">コラプション (堕落・誘惑)</div>
+        <div class="power-name">魂の引き裂き (Tear the Soul)</div>
+      </div>
+      <div class="power-dots" title="3ドット">●●●</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">3-dot Social Corruption</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">社会: 操作力 (Manipulation)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">2ヴィータイ (2 Vitae)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">対象の決意 (Target's Resolve)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">近距離 (Near)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">即時 (Instant)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">対象の精神防御を粉砕し、意志力を根こそぎ奪い去る。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">対象の精神の防壁を暴力的に破壊し、残されたすべての意志力ポイントを強制的に剥奪して無力化する。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••••: 対象を完全な無気力・昏睡状態（緊張病性昏迷）に陥れる。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Crush the target's mental defenses, stripping them of all remaining Willpower points.<br><br>
+      <strong>Maturing:</strong> •••••: Target falls into a catatonic stupor.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="ドミネイト (支配・威圧)" data-dot="1" data-name="記憶の霧散 (Cloud Memory)" data-summary="直前数分間の記憶を消去するか、無害な記憶に改ざんする。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">ドミネイト (支配・威圧)</div>
+        <div class="power-name">記憶の霧散 (Cloud Memory)</div>
+      </div>
+      <div class="power-dots" title="1ドット">●○○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">1-dot Mental Dominate</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">社会: 操作力 (Manipulation)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">対象の決意 (Target's Resolve)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">アイコンタクト/目を合わせた状態 (Eye contact)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">永続 (Permanent)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">直前数分間の記憶を消去するか、無害な記憶に改ざんする。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">視線を合わせた対象の過去数分間の記憶を完全に消し去るか、都合の良い曖昧で無害な記憶へとすり替える。</div>
+    </div>
+
+    
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Erase the last few minutes of a target's memory or replace them with a vague, harmless recollection.<br><br>
+      <strong>Maturing:</strong> None
+    </div>
+  </details>
+</div><div class="power-card" data-disc="ドミネイト (支配・威圧)" data-dot="1" data-name="一言の命令 (Command)" data-summary="「止まれ」「落とせ」等の一言の命令で対象を即座に従わせる。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">ドミネイト (支配・威圧)</div>
+        <div class="power-name">一言の命令 (Command)</div>
+      </div>
+      <div class="power-dots" title="1ドット">●○○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">1-dot Mental Dominate</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">社会: カリスマ (Charisma)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">対象の決意 (Target's Resolve)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">アイコンタクト/目を合わせた状態 (Eye contact)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">1ターン (One turn)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">「止まれ」「落とせ」等の一言の命令で対象を即座に従わせる。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">視線を固定し、1語の簡潔な命令（「止まれ」「走れ」「落とせ」「眠れ」など）を下す。対象はその手番ですぐに命令に従わなければならない。</div>
+    </div>
+
+    
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Lock eyes and issue a one-word command ('Halt', 'Drop', 'Run', 'Sleep') that the target must obey immediately.<br><br>
+      <strong>Maturing:</strong> None
+    </div>
+  </details>
+</div><div class="power-card" data-disc="ドミネイト (支配・威圧)" data-dot="1" data-name="催眠の命令 (Mesmerize)" data-summary="複雑な一連の指示を刷り込み、命令されたことすら忘れて実行させる。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">ドミネイト (支配・威圧)</div>
+        <div class="power-name">催眠の命令 (Mesmerize)</div>
+      </div>
+      <div class="power-dots" title="1ドット">●○○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">1-dot Mental Dominate</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">社会: 操作力 (Manipulation)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">意志力1点 (1 Willpower)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">対象の決意 (Target's Resolve)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">アイコンタクト/目を合わせた状態 (Eye contact)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">命令完遂まで (Until completed)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">複雑な一連の指示を刷り込み、命令されたことすら忘れて実行させる。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">対象の深層心理に詳細な命令を埋め込む。対象は術者から命じられた事実を忘れ、自発的な行動と信じ込んで命令を忠実に完遂する。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••: 特定の条件で発動するポスト催眠トリガーを埋め込める。
+•••••: 数日後に発動する複雑な時限命令をも実行させられる。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Implant detailed instructions that the target will carry out faithfully, forgetting that you ordered them to do so.<br><br>
+      <strong>Maturing:</strong> •••: Can implant post-hypnotic triggers.
+•••••: Subject obeys commands days later.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="ドミネイト (支配・威圧)" data-dot="2" data-name="狂気の誘発 (Dementation)" data-summary="一時的な狂気、妄想、感覚の錯乱を引き起こして錯乱させる。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">ドミネイト (支配・威圧)</div>
+        <div class="power-name">狂気の誘発 (Dementation)</div>
+      </div>
+      <div class="power-dots" title="2ドット">●●○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">2-dot Mental Dominate</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">社会: 操作力 (Manipulation)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">1ヴィータイ (1 Vitae)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">対象の平静 (Target's Composure)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">アイコンタクト/目を合わせた状態 (Eye contact)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">1シーン (One scene)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">一時的な狂気、妄想、感覚の錯乱を引き起こして錯乱させる。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">対象の精神の安定を打ち砕き、偏執病（パラノイア）、激しいヒステリー、あるいは知覚の幻覚を引き起こして発狂させる。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••: 対象が錯乱し、最も近くにいる人物に無差別攻撃を仕掛ける。
+•••••: 対象の狂気が恒久的な精神障害となる。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Drive a target temporarily insane, triggering paranoia, hysteria, or sensory hallucinations.<br><br>
+      <strong>Maturing:</strong> •••: Target attacks nearest individual.
+•••••: Insanity becomes permanent.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="ドミネイト (支配・威圧)" data-dot="2" data-name="潜伏命令 (Submerged Directive)" data-summary="特定の合図や状況に反応して起動する潜伏命令を植え付ける。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">ドミネイト (支配・威圧)</div>
+        <div class="power-name">潜伏命令 (Submerged Directive)</div>
+      </div>
+      <div class="power-dots" title="2ドット">●●○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">2-dot Mental Dominate</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">社会: 操作力 (Manipulation)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">意志力1点 (1 Willpower)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">対象の決意 (Target's Resolve)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">アイコンタクト/目を合わせた状態 (Eye contact)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">無期限/トリガー起動まで (Indefinite)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">特定の合図や状況に反応して起動する潜伏命令を植え付ける。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">対象の潜在意識にスリーパー指令を埋め込む。特定の感覚的引き金（特定の単語を聞く、特定の鐘の音など）を感知した際に初めて命令が自動起動する。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••: 1人の対象に最大3つの異なるトリガー命令を埋め込める。
+•••••: トリガー起動時、対象は主君への裏切りや重大犯罪をもためらわず実行する。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Plant a command that activates only when a specific sensory trigger occurs (e.g. hearing a phrase or chime).<br><br>
+      <strong>Maturing:</strong> •••: Can implant up to 3 triggers.
+•••••: Target will commit treason when triggered.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="ドミネイト (支配・威圧)" data-dot="2" data-name="忘却の精神 (The Forgetful Mind)" data-summary="数年間にわたる人生の記憶、人間関係、体験を深く書き換える。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">ドミネイト (支配・威圧)</div>
+        <div class="power-name">忘却の精神 (The Forgetful Mind)</div>
+      </div>
+      <div class="power-dots" title="2ドット">●●○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">2-dot Mental Dominate</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">社会: 操作力 (Manipulation)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">1ヴィータイ (1 Vitae)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">対象の決意 (Target's Resolve)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">アイコンタクト/目を合わせた状態 (Eye contact)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">永続 (Permanent)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">数年間にわたる人生の記憶、人間関係、体験を深く書き換える。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">対象の記憶の構造に深く入り込み、数年分に及ぶ重要な出来事、愛情や忠誠の対象、誓いなどの記憶を自在に再構築・書き換える。</div>
+    </div>
+
+    
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Enter the target's mind and systematically rewrite significant memories, relationships, and events.<br><br>
+      <strong>Maturing:</strong> None
+    </div>
+  </details>
+</div><div class="power-card" data-disc="ドミネイト (支配・威圧)" data-dot="3" data-name="肉体の憑依 (Possession)" data-summary="人間の肉体に意識を憑依させ、人形のように遠隔操作する。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">ドミネイト (支配・威圧)</div>
+        <div class="power-name">肉体の憑依 (Possession)</div>
+      </div>
+      <div class="power-dots" title="3ドット">●●●</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">3-dot Mental Dominate</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">社会: カリスマ (Charisma)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">2ヴィータイ (2 Vitae)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">対象の決意 (Target's Resolve)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">アイコンタクト/目を合わせた状態 (Eye contact)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">1夜 (One night)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">人間の肉体に意識を憑依させ、人形のように遠隔操作する。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">自身の肉体をトランス状態にして休眠させ、人間の肉体に意識を投影して完全にその肉体を支配・行動させる。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••••: 人間だけでなく、他の吸血鬼の肉体に憑依することが可能となる。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Project your consciousness into a mortal's body, controlling their actions while your vampire body lies inert.<br><br>
+      <strong>Maturing:</strong> •••••: Can possess another vampire.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="ドミネイト (支配・威圧)" data-dot="3" data-name="自己正当化 (Rationalize)" data-summary="支配下で行わせた全行動を、対象自身の妙案だったと信じ込ませる。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">ドミネイト (支配・威圧)</div>
+        <div class="power-name">自己正当化 (Rationalize)</div>
+      </div>
+      <div class="power-dots" title="3ドット">●●●</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">3-dot Mental Dominate</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">社会: 操作力 (Manipulation)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">1ヴィータイ (1 Vitae)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">対象の決意 (Target's Resolve)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">近距離 (Near)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">永続 (Permanent)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">支配下で行わせた全行動を、対象自身の妙案だったと信じ込ませる。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">術者のドミネイトによって実行させられたあらゆる行動について、被害者が「すべて自分自身の自発的かつ素晴らしいアイデアだった」と心から納得・正当化するように固定する。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••••: 対象が裁判や審問の場でも自らの行動を熱狂的に擁護するようになる。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Ensure the victim genuinely believes all actions taken under your Dominate were their own brilliant ideas.<br><br>
+      <strong>Maturing:</strong> •••••: Target vigorously defends actions in court.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="オブリビオン (忘却・深淵)" data-dot="1" data-name="暗黒の霧 (Cloud of Darkness)" data-summary="光を一切通さない絶対的暗黒の霧を召喚し、視界を奪う。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">オブリビオン (忘却・深淵)</div>
+        <div class="power-name">暗黒の霧 (Cloud of Darkness)</div>
+      </div>
+      <div class="power-dots" title="1ドット">●○○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">1-dot Mental Oblivion</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">精神: 機知 (Wits)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">1ヴィータイ (1 Vitae)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">近距離 (Near)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">1シーン (One scene)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">光を一切通さない絶対的暗黒の霧を召喚し、視界を奪う。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">照明やフラッシュライトを無効化する極寒の闇の雲を召喚する。霧の中では視界が奪われ、暗視すらも通さない完全な漆黒となる。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••: 闇が強烈な冷気を放ち、触れた人間にダメージを与える。
+•••••: 倉庫一棟全体を暗黒の雲で満たすことができる。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Summon freezing, impenetrable shadows that extinguish torches, blind flashlights, and muffle vision.<br><br>
+      <strong>Maturing:</strong> •••: Darkness chills mortals, dealing damage.
+•••••: Cloud fills an entire warehouse.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="オブリビオン (忘却・深淵)" data-dot="1" data-name="影の戯れ (Shadow Play)" data-summary="影を意のままに伸ばし、踊らせ、威圧的なシルエットに変形させる。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">オブリビオン (忘却・深淵)</div>
+        <div class="power-name">影の戯れ (Shadow Play)</div>
+      </div>
+      <div class="power-dots" title="1ドット">●○○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">1-dot Mental Oblivion</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">精神: 機知 (Wits)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">近距離 (Near)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">1シーン (One scene)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">影を意のままに伸ばし、踊らせ、威圧的なシルエットに変形させる。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">周囲にある既存の影を自在に操り、影を長く伸ばしたり、意思を持って動かしたり、恐ろしい怪物のシルエットを形作らせる。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••: 影が寒気を誘う不気味な囁き声を放つ。
+•••••: 影が自律的に動き回り、警備員の注意を誘導する。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Manipulate existing shadows, making them lengthen, dance, or assume menacing shapes.<br><br>
+      <strong>Maturing:</strong> •••: Shadows whisper chilling words.
+•••••: Shadows distract guards.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="オブリビオン (忘却・深淵)" data-dot="1" data-name="影の具現具 (Shadow Tools)" data-summary="闇を固形化させ、鋭利な刃やピッキング器具、ロープを作り出す。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">オブリビオン (忘却・深淵)</div>
+        <div class="power-name">影の具現具 (Shadow Tools)</div>
+      </div>
+      <div class="power-dots" title="1ドット">●○○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">1-dot Mental Oblivion</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">精神: 機知 (Wits)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">1ヴィータイ (1 Vitae)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">術者自身 (Self)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">1シーン (One scene)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">闇を固形化させ、鋭利な刃やピッキング器具、ロープを作り出す。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">周囲の影を織り上げて固形化させ、剃刀のように鋭い短剣、ピッキング用の鍵、あるいは影でできた強靭なロープなどの道具を生成する。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••: 影の武器が破滅的（Aggravated）ダメージを与えるようになる。
+•••••: 影の道具が硬質な鋼鉄をも容易に切断できるようになる。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Weave shadows into solid, razor-sharp blades, lockpicks, or climbing ropes made of solid darkness.<br><br>
+      <strong>Maturing:</strong> •••: Shadow weapons deal Aggravated damage.
+•••••: Tools can cut through steel.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="オブリビオン (忘却・深淵)" data-dot="2" data-name="生命を吸う闇 (Draining Darkness)" data-summary="闇の触手を巻き付かせ、対象の生気と体温を吸い取る。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">オブリビオン (忘却・深淵)</div>
+        <div class="power-name">生命を吸う闇 (Draining Darkness)</div>
+      </div>
+      <div class="power-dots" title="2ドット">●●○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">2-dot Mental Oblivion</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">社会: 操作力 (Manipulation)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">1ヴィータイ (1 Vitae)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">対象の持久力 (Target's Stamina)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">近距離 (Near)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">1シーン (One scene)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">闇の触手を巻き付かせ、対象の生気と体温を吸い取る。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">影の触手を対象に絡みつかせ、その肉体から活力と温もりを吸い上げて衰弱させ、持久力を奪う。</div>
+    </div>
+
+    
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Tendrils of darkness wrap around a target, siphoning their physical vigor and warmth.<br><br>
+      <strong>Maturing:</strong> None
+    </div>
+  </details>
+</div><div class="power-card" data-disc="オブリビオン (忘却・深淵)" data-dot="2" data-name="影の拘束 (Grasping Shadows)" data-summary="対象自身の足元の影を実体化させ、脚を掴んで床に拘束する。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">オブリビオン (忘却・深淵)</div>
+        <div class="power-name">影の拘束 (Grasping Shadows)</div>
+      </div>
+      <div class="power-dots" title="2ドット">●●○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">2-dot Mental Oblivion</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">肉体: 筋力 (Strength)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">1ヴィータイ (1 Vitae)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">対象の敏捷力 (Target's Dexterity)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">中距離 (Medium)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">1シーン (One scene)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">対象自身の足元の影を実体化させ、脚を掴んで床に拘束する。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">対象自身の影を触手のように実体化させて持ち主を拘束する。対象の足を掴んで転倒させ、床に縫い止めて身動きを封じる。</div>
+    </div>
+
+    
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Animate a target's own shadow to grapple, trip, or pin them to the ground.<br><br>
+      <strong>Maturing:</strong> None
+    </div>
+  </details>
+</div><div class="power-card" data-disc="オブリビオン (忘却・深淵)" data-dot="2" data-name="影の仮面 (Shadow Mask)" data-summary="生きた影を全身に纏い、防御装甲を得ると共に恐怖を放つ。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">オブリビオン (忘却・深淵)</div>
+        <div class="power-name">影の仮面 (Shadow Mask)</div>
+      </div>
+      <div class="power-dots" title="2ドット">●●○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">2-dot Mental Oblivion</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">精神: 機知 (Wits)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">1ヴィータイ (1 Vitae)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">術者自身 (Self)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">1シーン (One scene)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">生きた影を全身に纏い、防御装甲を得ると共に恐怖を放つ。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">身悶えする生きた影の衣で全身を覆い隠す。物理攻撃に対する防御装甲を得ると同時に、術者を見た敵に強烈な恐怖を植え付ける。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••: 敵の物理攻撃が影を素通りして無害化する。
+•••••: 影の仮面を見つめた敵に恐怖狂乱のチェックを強制する。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Veil your form in living shadows, gaining armor and terrifying anyone who looks upon you.<br><br>
+      <strong>Maturing:</strong> •••: Attacks pass through shadows harmlessly.
+•••••: Gaze causes terror frenzy in enemies.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="オブリビオン (忘却・深淵)" data-dot="3" data-name="深淵の悪夢 (Night Terrors)" data-summary="深淵から悪夢の亡霊を呼び寄せ、対象の精神と意志を直接砕く。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">オブリビオン (忘却・深淵)</div>
+        <div class="power-name">深淵の悪夢 (Night Terrors)</div>
+      </div>
+      <div class="power-dots" title="3ドット">●●●</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">3-dot Mental Oblivion</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">社会: 操作力 (Manipulation)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">2ヴィータイ (2 Vitae)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">対象の決意 (Target's Resolve)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">近距離 (Near)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">1シーン (One scene)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">深淵から悪夢の亡霊を呼び寄せ、対象の精神と意志を直接砕く。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">アビス（深淵）の深みから悪夢の影を召喚し、対象の精神と意志力を直接攻撃して精神崩壊を引き起こす。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••••: 対象が悲鳴を上げながら完全な発狂状態へと崩れ落ちる。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Summon nightmare specters from the Abyss that attack the target's psyche and resolve.<br><br>
+      <strong>Maturing:</strong> •••••: Target collapses into screaming madness.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="オブリビオン (忘却・深淵)" data-dot="3" data-name="影渡り (Shadow Step)" data-summary="一方の影へと身を沈め、中距離離れた別の影の中から瞬時に現れる。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">オブリビオン (忘却・深淵)</div>
+        <div class="power-name">影渡り (Shadow Step)</div>
+      </div>
+      <div class="power-dots" title="3ドット">●●●</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">3-dot Mental Oblivion</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">精神: 機知 (Wits)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">2ヴィータイ (2 Vitae)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">中距離 (Medium)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">即時 (Instant)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">一方の影へと身を沈め、中距離離れた別の影の中から瞬時に現れる。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">足元の影へと肉体を沈み込ませ、中距離（Medium）内にある別の影の中から瞬時に踏み出す。空間を跳躍する影渡りの技。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••••: 何キロメートルも離れた遠方の影へと影渡りが可能となる。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Step into a shadow in your room and step out from another shadow across the city block.<br><br>
+      <strong>Maturing:</strong> •••••: Can shadow step across miles.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="ポウテンス (怪力・剛力)" data-dot="1" data-name="猛進撃 (Bull Rush)" data-summary="圧倒的な力で突進し、進路上の敵を吹き飛ばして床に叩きつける。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">ポウテンス (怪力・剛力)</div>
+        <div class="power-name">猛進撃 (Bull Rush)</div>
+      </div>
+      <div class="power-dots" title="1ドット">●○○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">1-dot Physical Potence</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">肉体: 筋力 (Strength)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">1ヴィータイ (1 Vitae)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">術者自身 (Self)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">即時 (Instant)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">圧倒的な力で突進し、進路上の敵を吹き飛ばして床に叩きつける。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">超自然的な推進力で前方へ猛突進し、接触した敵を後方へと吹き飛ばして床に叩きつける。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••: レンガやコンクリートの壁を突き破って突進できる。
+•••••: 走行中の車両をも体当たりで横転・吹き飛ばす。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Charge forward with supernatural force, sending opponents flying backward and crashing to the floor.<br><br>
+      <strong>Maturing:</strong> •••: Smashes through brick walls.
+•••••: Knocks down vehicles.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="ポウテンス (怪力・剛力)" data-dot="1" data-name="怪力の爪痕 (Imprint)" data-summary="指先を石や鋼鉄に食い込ませ、壁や天井を蜘蛛のように登攀する。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">ポウテンス (怪力・剛力)</div>
+        <div class="power-name">怪力の爪痕 (Imprint)</div>
+      </div>
+      <div class="power-dots" title="1ドット">●○○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">1-dot Physical Potence</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">肉体: 筋力 (Strength)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">術者自身 (Self)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">1シーン (One scene)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">指先を石や鋼鉄に食い込ませ、壁や天井を蜘蛛のように登攀する。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">指先や足先を超人的な力で石材、レンガ、鋼鉄に食い込ませて足場を作り、垂直の壁面を蜘蛛のように登り降りする。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••: 天井に逆さにぶら下がりながら移動できるようになる。
+•••••: コンクリートの塊を素手で引き剥がして投擲武器として使用できる。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Dig fingers and boots into stone, brick, or steel, climbing sheer walls like a spider.<br><br>
+      <strong>Maturing:</strong> •••: Climb upside down across ceilings.
+•••••: Tear off chunks of concrete to throw.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="ポウテンス (怪力・剛力)" data-dot="1" data-name="飛翔の跳躍 (Soaring Leap)" data-summary="脚力を爆発させ、数階建ての屋上や道路を軽々と跳躍する。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">ポウテンス (怪力・剛力)</div>
+        <div class="power-name">飛翔の跳躍 (Soaring Leap)</div>
+      </div>
+      <div class="power-dots" title="1ドット">●○○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">1-dot Physical Potence</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">肉体: 筋力 (Strength)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">術者自身 (Self)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">即時 (Instant)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">脚力を爆発させ、数階建ての屋上や道路を軽々と跳躍する。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">脚部の筋肉を超人的に強化し、助走なしでも数階建てのビル屋上や広い大通りを軽々と飛び越える跳躍力を発揮する。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••: 5階建て以上のビルを一度の跳躍で飛び越える。
+•••••: 1回の跳躍で何キロメートルもの距離を踏破する。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Leap several stories into the air or leap across wide streets from rooftop to rooftop.<br><br>
+      <strong>Maturing:</strong> •••: Leap over 5-story buildings.
+•••••: Leap miles in single bounds.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="ポウテンス (怪力・剛力)" data-dot="2" data-name="骨砕き (Bone Breaker)" data-summary="組み付き時に超人的な力で骨や関節を容易にへし折る。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">ポウテンス (怪力・剛力)</div>
+        <div class="power-name">骨砕き (Bone Breaker)</div>
+      </div>
+      <div class="power-dots" title="2ドット">●●○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">2-dot Physical Potence</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">肉体: 筋力 (Strength)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">1ヴィータイ (1 Vitae)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">対象の持久力 (Target's Stamina)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">接触 (Touch)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">即時 (Instant)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">組み付き時に超人的な力で骨や関節を容易にへし折る。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">敵を組み伏せた際、怪力によって手足の骨や関節をへし折り、対象の手足を恒久的に破壊・無力化する。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••: 金属製の鎧や防具すらも容易に押し潰す。
+•••••: 骨を粉々に粉砕して粉末状にする。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> When grappling, snap bones and shatter joints, permanently crippling the limb.<br><br>
+      <strong>Maturing:</strong> •••: Crushes metal armor.
+•••••: Liquefies bone into dust.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="ポウテンス (怪力・剛力)" data-dot="2" data-name="大地揺るがし (Earthshock)" data-summary="地面に拳を叩きつけ、衝撃波で周囲の敵を転倒させる。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">ポウテンス (怪力・剛力)</div>
+        <div class="power-name">大地揺るがし (Earthshock)</div>
+      </div>
+      <div class="power-dots" title="2ドット">●●○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">2-dot Physical Potence</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">肉体: 筋力 (Strength)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">1ヴィータイ (1 Vitae)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">近距離 (Near)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">即時 (Instant)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">地面に拳を叩きつけ、衝撃波で周囲の敵を転倒させる。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">地面や床面に超怪力の拳を叩きつけ、周囲一帯に強烈な震動と衝撃波を走らせて、近距離にいるすべての敵を足元からすくい上げて転倒させる。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••: アスファルトの舗装道路を放射状に粉砕する。
+•••••: 小型建築物やプレハブ小屋を衝撃波で倒壊させる。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Strike the ground with a punch, sending a shockwave that knocks everyone nearby off their feet.<br><br>
+      <strong>Maturing:</strong> •••: Shatters street pavement.
+•••••: Collapses small buildings.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="ポウテンス (怪力・剛力)" data-dot="2" data-name="渾身の一撃 (Powerful Strike)" data-summary="次の一撃の威力を跳ね上げ、訓えドット数分の追加ダメージを与える。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">ポウテンス (怪力・剛力)</div>
+        <div class="power-name">渾身の一撃 (Powerful Strike)</div>
+      </div>
+      <div class="power-dots" title="2ドット">●●○</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">2-dot Physical Potence</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">肉体: 筋力 (Strength)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">1ヴィータイ (1 Vitae)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">術者自身 (Self)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">即時 (Instant)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">次の一撃の威力を跳ね上げ、訓えドット数分の追加ダメージを与える。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">次に行う素手（格闘）または近接武器による一撃に怪力を集中し、最終ダメージに直接［ポウテンスのドット数］を加える。</div>
+    </div>
+
+    
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Add Potence dots directly to the final damage of your next Melee or Brawl strike.<br><br>
+      <strong>Maturing:</strong> None
+    </div>
+  </details>
+</div><div class="power-card" data-disc="ポウテンス (怪力・剛力)" data-dot="3" data-name="不可避の痛撃 (Strike True)" data-summary="受け流しや回避を許さない不可避の超高速・超重量攻撃を繰り出す。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">ポウテンス (怪力・剛力)</div>
+        <div class="power-name">不可避の痛撃 (Strike True)</div>
+      </div>
+      <div class="power-dots" title="3ドット">●●●</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">3-dot Physical Potence</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">肉体: 筋力 (Strength)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">2ヴィータイ (2 Vitae)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">なし (None)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">術者自身 (Self)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">即時 (Instant)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">受け流しや回避を許さない不可避の超高速・超重量攻撃を繰り出す。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">回避不能な凄まじい速度と運動量をもって攻撃を繰り出し、防御側が受け流しや回避の判定を行うことを一切封じる。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••••: 重装甲や戦車級の防具を一撃で粉々に貫通・粉砕する。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Swing with such terrifying speed and momentum that defenders cannot dodge or block the blow.<br><br>
+      <strong>Maturing:</strong> •••••: Blow destroys heavy armor instantly.
+    </div>
+  </details>
+</div><div class="power-card" data-disc="ポウテンス (怪力・剛力)" data-dot="3" data-name="雄叫び (War Cry)" data-summary="魂を震わせる咆哮で人間を逃走させ、吸血鬼を恐怖狂乱に追い込む。">
+  <div>
+    <div class="power-header">
+      <div class="power-title-wrap">
+        <div class="power-discipline-badge">ポウテンス (怪力・剛力)</div>
+        <div class="power-name">雄叫び (War Cry)</div>
+      </div>
+      <div class="power-dots" title="3ドット">●●●</div>
+    </div>
+    
+    <div class="power-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">系統・種別</span>
+        <span class="meta-val">3-dot Social Potence</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動タイプ</span>
+        <span class="meta-val">アクション (Action)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">使用能力値</span>
+        <span class="meta-val">社会: カリスマ (Charisma)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">発動コスト</span>
+        <span class="meta-val">1ヴィータイ (1 Vitae)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">対抗/難易度</span>
+        <span class="meta-val">対象の平静 (Target's Composure)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">射程/距離</span>
+        <span class="meta-val">近距離 (Near)</span>
+      </div>
+      <div class="meta-item" style="grid-column: span 2;">
+        <span class="meta-label">持続時間</span>
+        <span class="meta-val">即時 (Instant)</span>
+      </div>
+    </div>
+
+    <div class="power-summary">魂を震わせる咆哮で人間を逃走させ、吸血鬼を恐怖狂乱に追い込む。</div>
+
+    <div class="power-rules-box">
+      <div class="rules-heading">ルールと効果の詳細</div>
+      <div class="rules-text">内なる獣の怪力を込めた戦慄の雄叫びを放ち、人間を恐怖で逃走させ、吸血鬼に対して恐怖狂乱（Rötschreck）の抵抗テストを強制する。</div>
+    </div>
+
+    <div class="maturing-box">
+  <div class="rules-heading">上位ドット時の成熟強化</div>
+  <div class="maturing-text">•••••: 咆哮の衝撃波が大通りを挟んだ向かいの建物のガラスを一斉に粉砕する。</div>
+</div>
+  </div>
+
+  <details class="en-accordion">
+    <summary>英語公式ルール原文を表示</summary>
+    <div class="en-content">
+      <strong>Description:</strong> Unleash a terrifying battle roar that sends mortals fleeing and forces Kindred to test for terror frenzy.<br><br>
+      <strong>Maturing:</strong> •••••: Roar shatters glass across the street.
+    </div>
+  </details>
+</div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+  <p>選択可能な氏族データ</p>
+</footer>
+
+  <script src="clan.js"></script>
+</body>
+</html>

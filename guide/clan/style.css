@@ -1,0 +1,667 @@
+/* Vampire: The Masquerade - Clan & Discipline Portal Stylesheet */
+:root {
+  --bg-main: #0a0a0e;
+  --bg-card: #14141d;
+  --bg-card-hover: #1c1c28;
+  --bg-inner: #0f0f16;
+  --border: #2c2c3e;
+  --border-focus: #c41e3a;
+  --text-main: #e8e8ed;
+  --text-muted: #9e9ea8;
+  --text-dim: #6c6c7d;
+  --crimson: #c41e3a;
+  --crimson-dark: #6e0d1d;
+  --crimson-glow: rgba(196, 30, 58, 0.35);
+  --gold: #d4af37;
+  --gold-glow: rgba(212, 175, 55, 0.25);
+  --font-serif: 'Crimson Pro', 'Noto Serif JP', 'Georgia', serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Noto Sans JP', Meiryo, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  min-height: 100vh;
+  background-image: 
+    radial-gradient(ellipse at 50% 0%, rgba(196, 30, 58, 0.12) 0%, transparent 60%),
+    radial-gradient(circle at 100% 100%, rgba(15, 15, 30, 0.8) 0%, transparent 50%);
+}
+
+/* Header & Nav */
+header.site-header {
+  background: rgba(12, 12, 18, 0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+.nav-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.site-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: var(--text-main);
+}
+
+.site-title .vtm-symbol {
+  font-size: 1.6rem;
+  color: var(--crimson);
+  text-shadow: 0 0 10px var(--crimson-glow);
+}
+
+.site-title .title-text {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.clan-nav-list {
+  display: flex;
+  list-style: none;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.clan-nav-item a {
+  display: block;
+  padding: 0.45rem 0.85rem;
+  border-radius: 4px;
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  font-weight: 500;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.clan-nav-item a:hover {
+  color: #fff;
+  background: rgba(196, 30, 58, 0.15);
+  border-color: rgba(196, 30, 58, 0.4);
+}
+
+.clan-nav-item.active a {
+  color: #fff;
+  background: var(--crimson-dark);
+  border-color: var(--crimson);
+  box-shadow: 0 0 12px var(--crimson-glow);
+}
+
+/* Main Container */
+main.main-content {
+  max-width: 1280px;
+  margin: 2rem auto;
+  padding: 0 1.5rem 4rem;
+}
+
+/* Hero Section */
+.hero-banner {
+  text-align: center;
+  padding: 3rem 1.5rem 2.5rem;
+  background: linear-gradient(180deg, rgba(20,20,30,0.7) 0%, rgba(10,10,14,0.4) 100%);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--crimson), var(--gold), var(--crimson), transparent);
+}
+
+.hero-tag {
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  color: #fff;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+}
+
+.hero-subtitle {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Clan Header on Clan Pages */
+.clan-header-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2.25rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.clan-header-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 5px;
+  background: var(--clan-theme, var(--crimson));
+  box-shadow: 0 0 15px var(--clan-theme, var(--crimson));
+  border-radius: 8px 0 0 8px;
+}
+
+.clan-title-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.clan-name-ja {
+  font-family: var(--font-serif);
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.clan-name-en {
+  font-size: 1.4rem;
+  color: var(--text-muted);
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+
+.clan-tagline {
+  font-size: 1.15rem;
+  color: var(--gold);
+  font-family: var(--font-serif);
+  font-style: italic;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.clan-tagline::before {
+  content: "“";
+  font-size: 1.5rem;
+  line-height: 0;
+}
+.clan-tagline::after {
+  content: "”";
+  font-size: 1.5rem;
+  line-height: 0;
+}
+
+.clan-lore {
+  color: #c9c9d4;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.clan-archetypes-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255,255,255,0.04);
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Clan Traits Grid (Beast / Curse / Frenzy) */
+.traits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.trait-box {
+  background: var(--bg-inner);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.25rem 1.4rem;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.trait-box:hover {
+  border-color: rgba(196, 30, 58, 0.5);
+  transform: translateY(-2px);
+}
+
+.trait-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.trait-label.beast { color: #ff7675; }
+.trait-label.curse { color: #fdcb6e; }
+.trait-label.frenzy { color: #ff5252; }
+
+.trait-title {
+  font-family: var(--font-serif);
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.trait-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Powers Section */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: 1.7rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Filter Controls */
+.filter-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.filter-btn {
+  background: var(--bg-card);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  padding: 0.35rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+  color: #fff;
+  border-color: var(--crimson);
+}
+
+.filter-btn.active {
+  background: var(--crimson-dark);
+  color: #fff;
+  border-color: var(--crimson);
+  box-shadow: 0 0 8px var(--crimson-glow);
+}
+
+.search-input {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: #fff;
+  padding: 0.45rem 0.9rem;
+  border-radius: 4px;
+  font-size: 0.88rem;
+  outline: none;
+  min-width: 220px;
+  transition: border-color 0.2s ease;
+}
+
+.search-input:focus {
+  border-color: var(--crimson);
+  box-shadow: 0 0 8px var(--crimson-glow);
+}
+
+/* Power Cards Grid */
+.powers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 1.5rem;
+}
+
+.power-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.power-card:hover {
+  border-color: rgba(196, 30, 58, 0.6);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+.power-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.power-title-wrap {
+  flex: 1;
+}
+
+.power-discipline-badge {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.power-name {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+}
+
+.power-dots {
+  color: var(--crimson);
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+/* Meta Stats Table */
+.power-meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem 0.75rem;
+  background: var(--bg-inner);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 6px;
+  padding: 0.75rem;
+  font-size: 0.82rem;
+  margin-bottom: 1rem;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.meta-label {
+  color: var(--text-dim);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.meta-val {
+  color: #dedee8;
+  font-weight: 500;
+}
+
+.power-summary {
+  color: #b5b5c4;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+  border-left: 2px solid var(--crimson);
+  padding-left: 0.6rem;
+}
+
+.power-rules-box {
+  background: rgba(0,0,0,0.25);
+  border-radius: 4px;
+  padding: 0.85rem;
+  margin-bottom: 0.85rem;
+}
+
+.rules-heading {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+  font-weight: 700;
+}
+
+.rules-text {
+  font-size: 0.88rem;
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* Maturing Rules */
+.maturing-box {
+  background: rgba(212, 175, 55, 0.05);
+  border: 1px dashed rgba(212, 175, 55, 0.3);
+  border-radius: 4px;
+  padding: 0.7rem;
+  margin-bottom: 0.75rem;
+}
+
+.maturing-box .rules-heading {
+  color: var(--gold);
+}
+
+.maturing-text {
+  font-size: 0.82rem;
+  color: #dedec8;
+  white-space: pre-line;
+  line-height: 1.5;
+}
+
+/* English Rules Accordion */
+details.en-accordion {
+  border-top: 1px solid var(--border);
+  padding-top: 0.6rem;
+  margin-top: auto;
+}
+
+details.en-accordion summary {
+  font-size: 0.76rem;
+  color: var(--text-dim);
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+}
+
+details.en-accordion summary:hover {
+  color: var(--text-muted);
+}
+
+details.en-accordion .en-content {
+  font-size: 0.78rem;
+  color: #8c8c99;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: rgba(0,0,0,0.3);
+  border-radius: 4px;
+}
+
+/* Home Cards Grid */
+.clans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.clan-preview-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.75rem;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.clan-preview-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--clan-theme, var(--crimson));
+  opacity: 0.7;
+  transition: opacity 0.2s ease, height 0.2s ease;
+}
+
+.clan-preview-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--clan-theme, var(--crimson));
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6), 0 0 15px rgba(196, 30, 58, 0.2);
+}
+
+.clan-preview-card:hover::before {
+  opacity: 1;
+  height: 6px;
+}
+
+.card-top {
+  margin-bottom: 1rem;
+}
+
+.card-clan-name {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.card-clan-en {
+  font-size: 1.1rem;
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+.card-tagline {
+  color: var(--gold);
+  font-size: 0.95rem;
+  font-style: italic;
+  margin: 0.5rem 0 1rem;
+}
+
+.card-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-disciplines {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: auto;
+}
+
+.disc-pill {
+  font-size: 0.75rem;
+  background: rgba(255,255,255,0.06);
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #d1d1db;
+}
+
+/* Footer */
+footer.site-footer {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  color: var(--text-dim);
+  font-size: 0.82rem;
+  border-top: 1px solid var(--border);
+  background: rgba(10,10,14,0.8);
+}
+
+footer.site-footer a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+footer.site-footer a:hover {
+  color: var(--crimson);
+}
+
+@media (max-width: 768px) {
+  .hero-title { font-size: 2rem; }
+  .clan-name-ja { font-size: 2rem; }
+  .powers-grid { grid-template-columns: 1fr; }
+  .power-meta-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,160 @@
+{
+  "name": "キャサリン・カタストロフ・デイビス",
+  "memo": "〈1990年代のパンクロッカー、オルタナティブ・ミュージシャン〉\nキャサリン・\"カタストロフ\"・デイビスは、外見年齢25歳、実年齢51歳の、ブルハーの吸血鬼である。2009年の春に〈抱擁〉を受けている。彼女の原風景は1990年代のアメリカ、およびその時代に一世を風靡したグランジやパンクロック文化にある。\n\n所持品:トゲつきギター(格闘,重武器/4ダメージ),「キャスリン・デイビス」のIDカード,ピッキング道具",
+  "clan": "Brujah",
+  "disciplines": [
+    {
+      "name": "Potence",
+      "dots": 2,
+      "powers": [
+        {
+          "name": "Imprint",
+          "description": "強大な指先の筋力で石材、レンガ、鋼鉄などに指を食い込ませ、垂直な壁面や天井に張り付いて移動できるようにする。"
+        },
+        {
+          "name": "Earthshock",
+          "description": "地面を強烈な力で殴りつけて局所的な地震と衝撃波を放ち、周囲の敵を転倒させて体勢を崩させる。"
+        }
+      ]
+    },
+    {
+      "name": "Presence",
+      "dots": 1,
+      "powers": [
+        {
+          "name": "Awe",
+          "description": "超自然的なカリスマと威圧感を放ち、その場のすべての人物の視線と注目を一身に集め、感嘆させると同時に威嚇する。"
+        }
+      ]
+    },
+    {
+      "name": "Fortitude",
+      "dots": 1,
+      "powers": [
+        {
+          "name": "Endure",
+          "description": "超自然的な肉体の耐久力を発揮し、被弾や打撃による激しい苦痛と衝撃に耐え、被ダメージを軽減する。"
+        }
+      ]
+    }
+  ],
+  "curse": "煮え立つ情熱",
+  "curseDescription": "激情に駆られやすく、挑発や感情の揺さぶりに抵抗する難易度が上昇する。",
+  "frenzy": "反逆",
+  "frenzyDescription": "権威や支配者への怒りから暴動を起こし、命令を拒絶して暴れ回る。",
+  "attributes": {
+    "strength": 4,
+    "dexterity": 3,
+    "stamina": 3,
+    "charisma": 3,
+    "manipulation": 2,
+    "composure": 3,
+    "intelligence": 1,
+    "wits": 2,
+    "resolve": 3
+  },
+  "skills": {
+    "Athletics": {
+      "dots": 2,
+      "focuses": "走法"
+    },
+    "Awareness": {
+      "dots": 2,
+      "focuses": "洞察"
+    },
+    "Craft": {
+      "dots": 0,
+      "focuses": ""
+    },
+    "Expression": {
+      "dots": 2,
+      "focuses": "音楽"
+    },
+    "Fighting": {
+      "dots": 3,
+      "focuses": "ダーティファイト,重武器"
+    },
+    "Investigation": {
+      "dots": 2,
+      "focuses": "裏社会"
+    },
+    "Knowledge": {
+      "dots": 0,
+      "focuses": ""
+    },
+    "Medicine": {
+      "dots": 0,
+      "focuses": ""
+    },
+    "Persuasion": {
+      "dots": 3,
+      "focuses": "仁義,脅迫"
+    },
+    "Sabotage": {
+      "dots": 2,
+      "focuses": "強盗"
+    },
+    "Shooting": {
+      "dots": 1,
+      "focuses": "中火器"
+    },
+    "Subterfuge": {
+      "dots": 2,
+      "focuses": "隠密"
+    },
+    "Survival": {
+      "dots": 0,
+      "focuses": ""
+    }
+  },
+  "resources": [
+    {
+      "category": "Wealth",
+      "detail": "",
+      "dots": 1
+    },
+    {
+      "category": "Ally",
+      "detail": "バンドメンバー",
+      "dots": 2
+    },
+    {
+      "category": "Mask",
+      "detail": "",
+      "dots": 1
+    },
+    {
+      "category": "Contact",
+      "detail": "",
+      "dots": 2
+    },
+    {
+      "category": "Haven",
+      "detail": "",
+      "dots": 1
+    },
+    {
+      "category": "Vehicle",
+      "detail": "バン",
+      "dots": 1
+    }
+  ],
+  "lifepaths": [
+    "Artist",
+    "Criminal"
+  ],
+  "merits": [
+    "Might"
+  ],
+  "flaws": [
+    "制御できない力:自分の力をうまくコントロールできず、使おうとしていた物を壊したり、傷つけるつもりのなかった人を傷つけてしまう"
+  ],
+  "nature": "Bravo",
+  "natureDescription": "力、威圧、暴力によって状況や他者を屈服させようとする本性。",
+  "beast": "反逆的",
+  "beastDescription": "あらゆる支配や抑圧に激しく反発し、自由を力づくで奪い取ろうとする内なる衝動。",
+  "generation": "13th",
+  "generationModifier": 1,
+  "sire": "Unknown Sire",
+  "imageUrl": null
+}

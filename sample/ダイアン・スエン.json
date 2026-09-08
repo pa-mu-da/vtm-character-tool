@@ -1,0 +1,155 @@
+{
+  "name": "ダイアン・スエン",
+  "memo": "〈しがらみを逃れる不羈の漂流者〉\nダイアン・スエンは、外見年齢28歳、実年齢45歳の、ギャンレルの吸血鬼である。2009年の春に〈抱擁〉を受けている。彼の原風景は2010年のアメリカ、およびその時代の若者たちの個人主義にある。\n\n所持品:猟銃(中火器/3ダメージ/長距離まで),さまざまな身元に対応した複数のIDカード,ナタ(軽武器/2ダメージ/格闘距離)",
+  "clan": "Gangrel",
+  "disciplines": [
+    {
+      "name": "Animalism",
+      "dots": 2,
+      "powers": [
+        {
+          "name": "Bestial Instinct",
+          "description": "内なる野性の嗅覚と本能を研ぎ澄まし、短距離内にある超自然的な気配や隠された脅威を即座に感知する。"
+        },
+        {
+          "name": "Feral Claws",
+          "description": "両手から獣の鋭い爪を伸ばす。素手攻撃が武器攻撃と同等の破壊力を持ち、致命的な破滅的ダメージを与えるようになる。"
+        }
+      ]
+    },
+    {
+      "name": "Celerity",
+      "dots": 1,
+      "powers": [
+        {
+          "name": "Rapid Reflexes",
+          "description": "超人的な反射神経を発揮し、銃撃や近接攻撃を含む敵からのあらゆる攻撃の回避・防御テストにボーナスを得る。"
+        }
+      ]
+    },
+    {
+      "name": "Potence",
+      "dots": 1,
+      "powers": [
+        {
+          "name": "Soaring Leap",
+          "description": "脚部に凄まじい筋力を込めることで、助走なしでもビルの屋上や高所へと一瞬で飛び移る跳躍力を発揮する。"
+        }
+      ]
+    }
+  ],
+  "curse": "受け入れられし獣",
+  "curseDescription": "狂乱するたびに獣の特徴（角、牙、毛皮等）が肉体に現れ、人間性が削られる。",
+  "frenzy": "野性の衝動",
+  "frenzyDescription": "理性の一切を失い、捕食者として獲物を引き裂くか、縄張りから逃走する。",
+  "attributes": {
+    "strength": 4,
+    "dexterity": 3,
+    "stamina": 3,
+    "charisma": 2,
+    "manipulation": 1,
+    "composure": 3,
+    "intelligence": 1,
+    "wits": 4,
+    "resolve": 3
+  },
+  "skills": {
+    "Athletics": {
+      "dots": 2,
+      "focuses": "走法"
+    },
+    "Awareness": {
+      "dots": 2,
+      "focuses": "直感"
+    },
+    "Craft": {
+      "dots": 2,
+      "focuses": "罠"
+    },
+    "Expression": {
+      "dots": 0,
+      "focuses": ""
+    },
+    "Fighting": {
+      "dots": 2,
+      "focuses": "素手格闘"
+    },
+    "Investigation": {
+      "dots": 3,
+      "focuses": "裏社会,裏市場"
+    },
+    "Knowledge": {
+      "dots": 0,
+      "focuses": ""
+    },
+    "Medicine": {
+      "dots": 0,
+      "focuses": ""
+    },
+    "Persuasion": {
+      "dots": 0,
+      "focuses": ""
+    },
+    "Sabotage": {
+      "dots": 0,
+      "focuses": ""
+    },
+    "Shooting": {
+      "dots": 1,
+      "focuses": "中火器"
+    },
+    "Subterfuge": {
+      "dots": 3,
+      "focuses": "変装,隠密"
+    },
+    "Survival": {
+      "dots": 3,
+      "focuses": "野外狩猟,都市追跡"
+    }
+  },
+  "resources": [
+    {
+      "category": "Status",
+      "detail": "カマリリャ",
+      "dots": 1
+    },
+    {
+      "category": "Repository",
+      "detail": "武器庫",
+      "dots": 3
+    },
+    {
+      "category": "Ally",
+      "detail": "ブルハーの血盟",
+      "dots": 1
+    },
+    {
+      "category": "Vehicle",
+      "detail": "モーターサイクル",
+      "dots": 2
+    },
+    {
+      "category": "Mask",
+      "detail": "",
+      "dots": 1
+    }
+  ],
+  "lifepaths": [
+    "Hunter",
+    "Hound"
+  ],
+  "merits": [
+    "Hunger Strength"
+  ],
+  "flaws": [
+    "自立:あなたは人に頼ることを極端に避ける。"
+  ],
+  "nature": "Survivor",
+  "natureDescription": "どんな逆境や危機にあっても、生き延びることを最優先とする本性。",
+  "beast": "野性的",
+  "beastDescription": "文明を軽視し、本能と弱肉強食の野生の論理を優先する内なる衝動。",
+  "generation": "13th",
+  "generationModifier": 1,
+  "sire": "Brood Child",
+  "imageUrl": null
+}

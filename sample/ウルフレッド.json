@@ -1,0 +1,154 @@
+{
+  "name": "ウルフレッド",
+  "memo": "〈無線技術者、通信科学研究者、第二次大戦の退役軍人〉\nウルフレッドは、外見年齢60歳、実年齢119歳の、ノスフェラトゥの吸血鬼である。1967年の冬に〈抱擁〉を受けている。彼の原風景は1970年代、初期のパーソナルコンピュータおよび通信科学の黎明期文化にある。\n\n所持品:ナイフ(軽武器/2ダメージ/格闘距離),ピストル(軽火器/2ダメージ/中距離まで),複数の身元に対応した各種IDカード,専用回線衛星携帯電話",
+  "clan": "Nosferatu",
+  "disciplines": [
+    {
+      "name": "Animalism",
+      "dots": 1,
+      "powers": [
+        {
+          "name": "Sweet Whispers",
+          "description": "動物の目を見つめ、あるいは囁きかけることで意思疎通を行い、簡単な命令や偵察任務を与えて遂行させる。"
+        }
+      ]
+    },
+    {
+      "name": "Obfuscate",
+      "dots": 3,
+      "powers": [
+        {
+          "name": "Cloak of Shadows",
+          "description": "影や物陰に溶け込み、静止している限り他者の視界から完全に不可視となる。"
+        },
+        {
+          "name": "Silence of Death",
+          "description": "自身の身体や装備が発するあらゆる移動音・接触音を完全に無音化し、完全な静寂の中で行動する。"
+        },
+        {
+          "name": "Mask of a Thousand Faces",
+          "description": "他者の認識を精神的に歪め、取るに足らない通行人や任意の人物の姿に見せかけて群衆の中に溶け込む。"
+        }
+      ]
+    }
+  ],
+  "curse": "顕現せる獣",
+  "curseDescription": "怪物的でグロテスクな外見をしており、定命の者の目に触れると恐怖と拒絶を引き起こす。",
+  "frenzy": "偏執狂的求知",
+  "frenzyDescription": "知への渇望に完全に呑まれ、秘密や未知の情報を暴くことに取り憑かれる。",
+  "attributes": {
+    "strength": 2,
+    "dexterity": 3,
+    "stamina": 3,
+    "charisma": 1,
+    "manipulation": 3,
+    "composure": 2,
+    "intelligence": 3,
+    "wits": 3,
+    "resolve": 4
+  },
+  "skills": {
+    "Athletics": {
+      "dots": 1,
+      "focuses": "登攀"
+    },
+    "Awareness": {
+      "dots": 2,
+      "focuses": "超自然"
+    },
+    "Craft": {
+      "dots": 2,
+      "focuses": "コンピュータ"
+    },
+    "Expression": {
+      "dots": 0,
+      "focuses": ""
+    },
+    "Fighting": {
+      "dots": 1,
+      "focuses": "小型近接武器"
+    },
+    "Investigation": {
+      "dots": 2,
+      "focuses": "デジタルメディア"
+    },
+    "Knowledge": {
+      "dots": 2,
+      "focuses": "言語学"
+    },
+    "Medicine": {
+      "dots": 2,
+      "focuses": "応急手当"
+    },
+    "Persuasion": {
+      "dots": 2,
+      "focuses": "欺瞞"
+    },
+    "Sabotage": {
+      "dots": 2,
+      "focuses": "セキュリティシステム"
+    },
+    "Shooting": {
+      "dots": 2,
+      "focuses": "重火器"
+    },
+    "Subterfuge": {
+      "dots": 1,
+      "focuses": "変装"
+    },
+    "Survival": {
+      "dots": 0,
+      "focuses": ""
+    }
+  },
+  "resources": [
+    {
+      "category": "Wealth",
+      "detail": "",
+      "dots": 1
+    },
+    {
+      "category": "Ally",
+      "detail": "かつての戦友",
+      "dots": 1
+    },
+    {
+      "category": "Mask",
+      "detail": "",
+      "dots": 2
+    },
+    {
+      "category": "Repository",
+      "detail": "武器庫",
+      "dots": 1
+    },
+    {
+      "category": "Haven",
+      "detail": "",
+      "dots": 2
+    },
+    {
+      "category": "Repository",
+      "detail": "工具類",
+      "dots": 2
+    }
+  ],
+  "lifepaths": [
+    "Military",
+    "Technician"
+  ],
+  "merits": [
+    "Bond Famulus"
+  ],
+  "flaws": [
+    "猜疑心:他者を信用することが難しく、孤立しがちで、味方に対しても情報を隠してしまう。"
+  ],
+  "nature": "Scientist",
+  "natureDescription": "理性、実験、知識の探求によって真理を解き明かそうとする本性。",
+  "beast": "秘密主義",
+  "beastDescription": "秘密と知識に飢え、知られざる情報を収集し溜め込もうとする内なる衝動。",
+  "generation": "13th",
+  "generationModifier": 1,
+  "sire": "Cruel Sire",
+  "imageUrl": null
+}

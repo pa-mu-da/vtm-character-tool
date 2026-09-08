@@ -1,0 +1,150 @@
+{
+  "name": "レオナルド",
+  "memo": "〈汚職に手を染める実業家、抜け目のないマフィオーソ〉\nレオナルドは、外見年齢35歳、実年齢65歳の、ラソンブラの吸血鬼である。1996年の冬に〈抱擁〉を受けている。彼の原風景は1980年代のアメリカ、およびその時代の汚職と搾取の文化にある。\n\n所持品:ヘビーピストル(中火器/3ダメージ/長距離まで)、「レオナルド・フェラーラ」のIDカード,高級アパート(隠れ家)の鍵,機密ビジネス情報の手帳",
+  "clan": "Lasombra",
+  "disciplines": [
+    {
+      "name": "Dominate",
+      "dots": 1,
+      "powers": [
+        {
+          "name": "Command",
+          "description": "短距離内の見えている対象に1文の簡潔な口頭命令を下し、即座に従わせる。対象の精神を一時的に制圧し、自律的な思考を奪って操り人形のように命令を実行させる。"
+        }
+      ]
+    },
+    {
+      "name": "Oblivion",
+      "dots": 2,
+      "powers": [
+        {
+          "name": "Shadow Tools",
+          "description": "周囲の影を圧縮・凝縮させ、固体の影でできた道具、鍵、衣類などの小物を作り出す。影の中にある限り実物同様に機能する。"
+        },
+        {
+          "name": "Grasping Shadows",
+          "description": "対象自身の影を触手のように実体化させて持ち主を掴ませ、［拘束］状態に陥れる。さらに影を締め上げさせてダメージを与えることができる。"
+        }
+      ]
+    },
+    {
+      "name": "Presence",
+      "dots": 1,
+      "powers": [
+        {
+          "name": "Dread Gaze",
+          "description": "威圧的な視線で睨みつけた対象に強烈な恐怖と不安を植え付け、自身を見ている間、対象の全テストに-1ダイスペナルティを与える。"
+        }
+      ]
+    }
+  ],
+  "curse": "影の気配",
+  "curseDescription": "鏡や映像に姿が歪んで映り、技術機器の使用に精神力での克服判定を要する。",
+  "frenzy": "冷酷",
+  "frenzyDescription": "ミスや無能に対する寛容さがゼロになり、失敗の訂正に固執して全判定にペナルティを受ける。",
+  "attributes": {
+    "strength": 2,
+    "dexterity": 2,
+    "stamina": 2,
+    "charisma": 3,
+    "manipulation": 4,
+    "composure": 3,
+    "intelligence": 2,
+    "wits": 3,
+    "resolve": 3
+  },
+  "skills": {
+    "Athletics": {
+      "dots": 2,
+      "focuses": "走法"
+    },
+    "Awareness": {
+      "dots": 1,
+      "focuses": "共感"
+    },
+    "Craft": {
+      "dots": 0,
+      "focuses": ""
+    },
+    "Expression": {
+      "dots": 0,
+      "focuses": ""
+    },
+    "Fighting": {
+      "dots": 2,
+      "focuses": "ダーティファイト"
+    },
+    "Investigation": {
+      "dots": 2,
+      "focuses": "ゴシップ"
+    },
+    "Knowledge": {
+      "dots": 2,
+      "focuses": "ビジネス"
+    },
+    "Medicine": {
+      "dots": 0,
+      "focuses": ""
+    },
+    "Persuasion": {
+      "dots": 3,
+      "focuses": "交渉,脅迫"
+    },
+    "Sabotage": {
+      "dots": 0,
+      "focuses": ""
+    },
+    "Shooting": {
+      "dots": 3,
+      "focuses": "軽火器,重火器"
+    },
+    "Subterfuge": {
+      "dots": 3,
+      "focuses": "欺瞞,隠密"
+    },
+    "Survival": {
+      "dots": 0,
+      "focuses": ""
+    }
+  },
+  "resources": [
+    {
+      "category": "Contact",
+      "detail": "故買屋",
+      "dots": 2
+    },
+    {
+      "category": "Wealth",
+      "detail": "",
+      "dots": 3
+    },
+    {
+      "category": "Haven",
+      "detail": "高級アパート",
+      "dots": 3
+    },
+    {
+      "category": "Vehicle",
+      "detail": "乗用車",
+      "dots": 2
+    }
+  ],
+  "lifepaths": [
+    "Criminal",
+    "Corporate Executive"
+  ],
+  "merits": [
+    "Intimidating Presence"
+  ],
+  "flaws": [
+    "短気:怒りっぽく、友好的に解決すべき衝突をエスカレートさせがちである。"
+  ],
+  "nature": "Autocrat",
+  "natureDescription": "指導権を握り、他者を支配・管理することに充足感を覚える本性。",
+  "beast": "処罰者",
+  "beastDescription": "失敗を軽蔑し、不首尾に終わった者を罰し辱めようとする内なる衝動。",
+  "generation": "13th",
+  "generationModifier": 1,
+  "sire": "Manipulative Sire",
+  "imageUrl": null
+}

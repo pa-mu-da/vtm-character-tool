@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>全14ライフパス (Lifepaths) 詳細解説 - Vampire: The Masquerade Alpha 1.0</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="site-title">
+        <span class="vtm-symbol">☥</span>
+        <span class="title-text">VtM キャラクター作成ガイド</span>
+      </a>
+      <ul class="main-nav-list">
+        <li class="main-nav-item"><a href="index.html">キャラメイク手順 (9ステップ)</a></li>
+        <li class="main-nav-item active"><a href="lifepaths.html">ライフパス (Lifepaths)</a></li>
+        <li class="main-nav-item"><a href="skills.html">技能 (Skills)</a></li>
+        <li class="main-nav-item"><a href="natures.html">本性 (Natures)</a></li>
+        <li class="main-nav-item"><a href="merits.html">長所 (Merits)</a></li>
+        <li class="main-nav-item highlight"><a href="clan/index.html">選択可能な氏族データ ↗</a></li>
+        <li class="main-nav-item" style="margin-left:auto;"><a href="../index.html" style="color:#ff6b6b; font-weight:bold;">⚔️ キャラシート作成ツール ↗</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="hero-banner">
+      <span class="hero-tag">Character Creation Reference</span>
+      <h1 class="hero-title">全14ライフパス (Lifepaths) 技能・資産詳細</h1>
+      <p class="hero-subtitle">
+        キャラクターの過去の生業と人間性を定義し、初期技能（5ドット）と初期資産（3ドット）を獲得する全14種のライフパス完全ガイドです。
+      </p>
+    </div>
+
+    <!-- RULE OVERVIEW -->
+    <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:6px; padding:1.25rem 1.5rem; margin-bottom:2rem; font-size:0.92rem; line-height:1.7;">
+      <h2 style="color:var(--gold); font-size:1.1rem; margin-bottom:0.6rem;">【ライフパスの選択と配分ルール】</h2>
+      <ul style="margin:0 0 0 1.2rem; padding:0;">
+        <li><strong>選択数</strong>：キャラクター作成時、通常は<strong>「2つ」</strong>のライフパスを選択します（定命時代の生前経歴から1つ＋吸血鬼化後の生業から1つ、あるいは生前経歴2つなど）。</li>
+        <li><strong>技能（Skills）の割り振り</strong>：選んだライフパスごとに、リストされた<strong>5つの技能に「合計5ドット」</strong>を自由に割り振ります（2つのライフパスで<strong>計10ドット</strong>）。</li>
+        <li><strong>初期上限（3ドット制限）</strong>：キャラクター作成時、いかなる技能も<strong>「3ドット」を超えることはできません</strong>。もし2つのライフパスで同じ技能を選び合計4ドット以上になった場合は、3ドットを超えた分を他の任意の技能へ自由に再配分します。</li>
+        <li><strong>フォーカス（専門化）の獲得</strong>：技能ドットが<strong>奇数（1ドット目、3ドット目）</strong>に達するたびに、その技能の専門分野を示す「フォーカス」を獲得します（適用される判定時にダイスプール＋1個）。</li>
+        <li><strong>資産（Resources）の割り振り</strong>：選んだライフパスごとに、リストされた<strong>3つの資産に「合計3ドット」</strong>を自由に割り振ります（2つのライフパスで<strong>計6ドット</strong>）。</li>
+      </ul>
+    </div>
+
+    <!-- TABLE -->
+    <div style="margin-bottom:2.5rem;">
+      <h2 style="font-size:1.2rem; color:var(--text-main); margin-bottom:0.75rem; border-bottom:1px solid var(--border); pb-2;">ライフパス一覧（クイック参照）</h2>
+      <div class="data-table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>区分</th>
+              <th>ライフパス名</th>
+              <th>選択可能な技能（5つ）</th>
+              <th>選択可能な資産（3つ）</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+      <tr>
+        <td style="white-space:nowrap;"><span style="color:var(--blue); font-weight:600;">Mortal</span></td>
+        <td style="white-space:nowrap;"><strong><a href="#artist" style="color:var(--text-main); text-decoration:underline;">芸術家</a></strong><br><span style="font-size:0.8rem; color:var(--text-dim);">Artist</span></td>
+        <td style="font-size:0.88rem;">知覚、製作、表現、説得、策略</td>
+        <td style="font-size:0.88rem;">資産、情報屋、不動産</td>
+      </tr>
+    
+      <tr>
+        <td style="white-space:nowrap;"><span style="color:var(--blue); font-weight:600;">Mortal</span></td>
+        <td style="white-space:nowrap;"><strong><a href="#corporate-executive" style="color:var(--text-main); text-decoration:underline;">企業幹部</a></strong><br><span style="font-size:0.8rem; color:var(--text-dim);">Corporate Executive</span></td>
+        <td style="font-size:0.88rem;">知覚、調査、知識、説得、策略</td>
+        <td style="font-size:0.88rem;">資産、不動産、隠れ家</td>
+      </tr>
+    
+      <tr>
+        <td style="white-space:nowrap;"><span style="color:var(--blue); font-weight:600;">Mortal</span></td>
+        <td style="white-space:nowrap;"><strong><a href="#criminal" style="color:var(--text-main); text-decoration:underline;">犯罪者</a></strong><br><span style="font-size:0.8rem; color:var(--text-dim);">Criminal</span></td>
+        <td style="font-size:0.88rem;">運動、知覚、格闘、妨害、策略</td>
+        <td style="font-size:0.88rem;">情報屋、資産、偽の身元</td>
+      </tr>
+    
+      <tr>
+        <td style="white-space:nowrap;"><span style="color:var(--blue); font-weight:600;">Mortal</span></td>
+        <td style="white-space:nowrap;"><strong><a href="#holy-person" style="color:var(--text-main); text-decoration:underline;">聖職者</a></strong><br><span style="font-size:0.8rem; color:var(--text-dim);">Holy Person</span></td>
+        <td style="font-size:0.88rem;">知覚、表現、知識、医療、説得</td>
+        <td style="font-size:0.88rem;">情報屋、隠れ家、地位・影響力</td>
+      </tr>
+    
+      <tr>
+        <td style="white-space:nowrap;"><span style="color:var(--blue); font-weight:600;">Mortal</span></td>
+        <td style="white-space:nowrap;"><strong><a href="#hunter" style="color:var(--text-main); text-decoration:underline;">ハンター / 狩人</a></strong><br><span style="font-size:0.8rem; color:var(--text-dim);">Hunter</span></td>
+        <td style="font-size:0.88rem;">知覚、製作、格闘、射撃、生存</td>
+        <td style="font-size:0.88rem;">隠れ家、保管庫、情報屋</td>
+      </tr>
+    
+      <tr>
+        <td style="white-space:nowrap;"><span style="color:var(--blue); font-weight:600;">Mortal</span></td>
+        <td style="white-space:nowrap;"><strong><a href="#military" style="color:var(--text-main); text-decoration:underline;">軍人</a></strong><br><span style="font-size:0.8rem; color:var(--text-dim);">Military</span></td>
+        <td style="font-size:0.88rem;">運動、格闘、医療、射撃、生存</td>
+        <td style="font-size:0.88rem;">保管庫、情報屋、資産</td>
+      </tr>
+    
+      <tr>
+        <td style="white-space:nowrap;"><span style="color:var(--blue); font-weight:600;">Mortal</span></td>
+        <td style="white-space:nowrap;"><strong><a href="#politician" style="color:var(--text-main); text-decoration:underline;">政治家</a></strong><br><span style="font-size:0.8rem; color:var(--text-dim);">Politician</span></td>
+        <td style="font-size:0.88rem;">知覚、調査、知識、説得、策略</td>
+        <td style="font-size:0.88rem;">資産、地位、影響力</td>
+      </tr>
+    
+      <tr>
+        <td style="white-space:nowrap;"><span style="color:var(--blue); font-weight:600;">Mortal</span></td>
+        <td style="white-space:nowrap;"><strong><a href="#technician" style="color:var(--text-main); text-decoration:underline;">技術者</a></strong><br><span style="font-size:0.8rem; color:var(--text-dim);">Technician</span></td>
+        <td style="font-size:0.88rem;">運動、製作、格闘、知識、妨害</td>
+        <td style="font-size:0.88rem;">車両、不動産、資産</td>
+      </tr>
+    
+      <tr>
+        <td style="white-space:nowrap;"><span style="color:var(--crimson); font-weight:600;">Neonate</span></td>
+        <td style="white-space:nowrap;"><strong><a href="#blood-deliverer" style="color:var(--text-main); text-decoration:underline;">血液配達人</a></strong><br><span style="font-size:0.8rem; color:var(--text-dim);">Blood Deliverer</span></td>
+        <td style="font-size:0.88rem;">運動、知覚、説得、妨害、策略</td>
+        <td style="font-size:0.88rem;">車両、資産、情報屋</td>
+      </tr>
+    
+      <tr>
+        <td style="white-space:nowrap;"><span style="color:var(--crimson); font-weight:600;">Neonate</span></td>
+        <td style="white-space:nowrap;"><strong><a href="#clean-up-crew" style="color:var(--text-main); text-decoration:underline;">掃除屋 / 隠蔽工作員</a></strong><br><span style="font-size:0.8rem; color:var(--text-dim);">Clean Up Crew</span></td>
+        <td style="font-size:0.88rem;">運動、格闘、調査、妨害、策略</td>
+        <td style="font-size:0.88rem;">情報屋、資産、保管庫</td>
+      </tr>
+    
+      <tr>
+        <td style="white-space:nowrap;"><span style="color:var(--crimson); font-weight:600;">Neonate</span></td>
+        <td style="white-space:nowrap;"><strong><a href="#hound" style="color:var(--text-main); text-decoration:underline;">番犬 / 処刑人の手先</a></strong><br><span style="font-size:0.8rem; color:var(--text-dim);">Hound</span></td>
+        <td style="font-size:0.88rem;">格闘、調査、妨害、射撃、策略</td>
+        <td style="font-size:0.88rem;">地位、隠れ家、資産</td>
+      </tr>
+    
+      <tr>
+        <td style="white-space:nowrap;"><span style="color:var(--gold); font-weight:600;">Ancilla</span></td>
+        <td style="white-space:nowrap;"><strong><a href="#diplomat" style="color:var(--text-main); text-decoration:underline;">外交官</a></strong><br><span style="font-size:0.8rem; color:var(--text-dim);">Diplomat</span></td>
+        <td style="font-size:0.88rem;">知覚、表現、知識、説得、策略</td>
+        <td style="font-size:0.88rem;">隠れ家、地位、影響力</td>
+      </tr>
+    
+      <tr>
+        <td style="white-space:nowrap;"><span style="color:var(--gold); font-weight:600;">Ancilla</span></td>
+        <td style="white-space:nowrap;"><strong><a href="#harpy" style="color:var(--text-main); text-decoration:underline;">ハーピー</a></strong><br><span style="font-size:0.8rem; color:var(--text-dim);">Harpy</span></td>
+        <td style="font-size:0.88rem;">知覚、表現、知識、説得、策略</td>
+        <td style="font-size:0.88rem;">隠れ家、地位、影響力</td>
+      </tr>
+    
+      <tr>
+        <td style="white-space:nowrap;"><span style="color:var(--gold); font-weight:600;">Ancilla</span></td>
+        <td style="white-space:nowrap;"><strong><a href="#sheriff" style="color:var(--text-main); text-decoration:underline;">シェリフ / 保安官</a></strong><br><span style="font-size:0.8rem; color:var(--text-dim);">Sheriff</span></td>
+        <td style="font-size:0.88rem;">知覚、格闘、調査、説得、射撃</td>
+        <td style="font-size:0.88rem;">協力者、地位、保管庫</td>
+      </tr>
+    
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- CARDS -->
+    <div class="section-header" style="margin-top:2rem;">
+      <h2 class="section-title">ライフパス詳細（逐語訳＆データ解説）</h2>
+      <span style="font-size:0.9rem; color:var(--text-dim);">各ライフパスの背景設定、獲得できる技能と資産の具体的な内訳です</span>
+    </div>
+
+    <div class="items-grid">
+      
+      <div class="item-card" id="artist">
+        <div class="item-header">
+          <div>
+            <span class="item-name">芸術家</span>
+            <span class="item-en">(Artist)</span>
+          </div>
+          <span class="item-badge" style="border-color:var(--blue); color:var(--blue);">Mortal（人間時代）</span>
+        </div>
+        <div class="item-desc">あなたは創造するために生きていた。キャンバス、彫刻、旋律、あるいは散文を通じて自らの魂を表現していた。抱擁（吸血鬼化）はあなたの天才性を永遠のものとしたか、あるいは定命の頃の情熱がゆっくりと冷え、空虚になっていく様を見つめる呪いとなった。</div>
+
+        <div class="item-sub-box" style="margin-top:1rem; border-left:3px solid var(--crimson);">
+          <div class="item-sub-title" style="color:#ff8585;">獲得可能な技能リスト（計5ドットを自由に割り振る / 上限3）</div>
+          <ul style="margin:0 0 0 1.2rem; padding:0; line-height:1.6; font-size:0.9rem;">
+            <li><strong>知覚 (Awareness)</strong>：<span style='color:var(--text-muted);'>環境観察、インスピレーション</span></li><li><strong>製作 (Craft)</strong>：<span style='color:var(--text-muted);'>彫刻、絵画、工芸品製作</span></li><li><strong>表現 (Expression)</strong>：<span style='color:var(--text-muted);'>特定の芸術分野を選択 (choose an art form)</span></li><li><strong>説得 (Persuasion)</strong>：<span style='color:var(--text-muted);'>情熱の伝達、パトロンとの交渉</span></li><li><strong>策略 (Subterfuge)</strong>：<span style='color:var(--text-muted);'>本心の隠蔽、世渡り</span></li>
+          </ul>
+        </div>
+
+        <div class="item-sub-box" style="margin-top:0.75rem; border-left:3px solid var(--gold);">
+          <div class="item-sub-title" style="color:var(--gold);">獲得可能な資産リスト（計3ドットを自由に割り振る）</div>
+          <ul style="margin:0 0 0 1.2rem; padding:0; line-height:1.6; font-size:0.9rem;">
+            <li><strong>資産 (Wealth)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[資金・生活費]</span>：<span style='color:var(--text-muted);'>個展の売上や貯蓄、作品価値</span></li><li><strong>情報屋 (Contacts)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[Social Asset]</span>：<span style='color:var(--text-muted);'>美術界・画商・批評家の人脈 (Art World)</span></li><li><strong>不動産 (Property)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[Physical Asset]</span>：<span style='color:var(--text-muted);'>制作アトリエ・スタジオ (Studio)</span></li>
+          </ul>
+        </div>
+
+        <details style="margin-top:0.75rem; font-size:0.78rem; color:var(--text-dim);">
+          <summary style="cursor:pointer;">公式ルール原文 (英語)</summary>
+          <div style="margin-top:0.4rem; padding:0.4rem; background:rgba(0,0,0,0.3); border-radius:4px; line-height:1.5;">
+            You lived to create, expressing your soul through canvas, sculpture, melody, or prose. The Embrace either immortalized your genius or cursed you to watch your mortal passion slowly turn cold and hollow.
+          </div>
+        </details>
+      </div>
+    
+      <div class="item-card" id="corporate-executive">
+        <div class="item-header">
+          <div>
+            <span class="item-name">企業幹部</span>
+            <span class="item-en">(Corporate Executive)</span>
+          </div>
+          <span class="item-badge" style="border-color:var(--blue); color:var(--blue);">Mortal（人間時代）</span>
+        </div>
+        <div class="item-desc">あなたの戦場は役員会議室であり、機敏な知性と鋭い洞察力を発揮していた。欲しいものを手に入れるために必要なことを行い、行く手を阻む人々を利用・排除する術を心得ている。</div>
+
+        <div class="item-sub-box" style="margin-top:1rem; border-left:3px solid var(--crimson);">
+          <div class="item-sub-title" style="color:#ff8585;">獲得可能な技能リスト（計5ドットを自由に割り振る / 上限3）</div>
+          <ul style="margin:0 0 0 1.2rem; padding:0; line-height:1.6; font-size:0.9rem;">
+            <li><strong>知覚 (Awareness)</strong>：<span style='color:var(--text-muted);'>相手の意図察知、動揺の見抜き</span></li><li><strong>調査 (Investigation)</strong>：<span style='color:var(--text-muted);'>業界ゴシップ・裏情報 (Gossip)</span></li><li><strong>知識 (Knowledge)</strong>：<span style='color:var(--text-muted);'>ビジネス・経営・金融 (Business)</span></li><li><strong>説得 (Persuasion)</strong>：<span style='color:var(--text-muted);'>商談、利害調整、プレゼン</span></li><li><strong>策略 (Subterfuge)</strong>：<span style='color:var(--text-muted);'>欺瞞・数字の操作 (Deceit)</span></li>
+          </ul>
+        </div>
+
+        <div class="item-sub-box" style="margin-top:0.75rem; border-left:3px solid var(--gold);">
+          <div class="item-sub-title" style="color:var(--gold);">獲得可能な資産リスト（計3ドットを自由に割り振る）</div>
+          <ul style="margin:0 0 0 1.2rem; padding:0; line-height:1.6; font-size:0.9rem;">
+            <li><strong>資産 (Wealth)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[潤沢な資金]</span>：<span style='color:var(--text-muted);'>役員報酬、株式配当、流動資産</span></li><li><strong>不動産 (Property)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[Physical Asset]</span>：<span style='color:var(--text-muted);'>高級オフィスビル、商業不動産</span></li><li><strong>隠れ家 (Haven)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[Physical Asset]</span>：<span style='color:var(--text-muted);'>高級ペントハウス、タワーマンション</span></li>
+          </ul>
+        </div>
+
+        <details style="margin-top:0.75rem; font-size:0.78rem; color:var(--text-dim);">
+          <summary style="cursor:pointer;">公式ルール原文 (英語)</summary>
+          <div style="margin-top:0.4rem; padding:0.4rem; background:rgba(0,0,0,0.3); border-radius:4px; line-height:1.5;">
+            Your battlefield is the corporate boardroom, where you exercise your quick wits and sharp acumen. You do what you need to get what you want, and you know how to use people that are standing in your way.
+          </div>
+        </details>
+      </div>
+    
+      <div class="item-card" id="criminal">
+        <div class="item-header">
+          <div>
+            <span class="item-name">犯罪者</span>
+            <span class="item-en">(Criminal)</span>
+          </div>
+          <span class="item-badge" style="border-color:var(--blue); color:var(--blue);">Mortal（人間時代）</span>
+        </div>
+        <div class="item-desc">あなたは法を破ることで生計を立てていた。他人が持つものを力づくで奪うか、あるいはより狡猾な手段でかすめ取っていた。刑務所で過ごした経験があるか、あるいは組織犯罪の一員として活動していたかもしれない。</div>
+
+        <div class="item-sub-box" style="margin-top:1rem; border-left:3px solid var(--crimson);">
+          <div class="item-sub-title" style="color:#ff8585;">獲得可能な技能リスト（計5ドットを自由に割り振る / 上限3）</div>
+          <ul style="margin:0 0 0 1.2rem; padding:0; line-height:1.6; font-size:0.9rem;">
+            <li><strong>運動 (Athletics)</strong>：<span style='color:var(--text-muted);'>走法・逃走 (Running)</span></li><li><strong>知覚 (Awareness)</strong>：<span style='color:var(--text-muted);'>警察や危険の察知、見張り</span></li><li><strong>格闘 (Fighting)</strong>：<span style='color:var(--text-muted);'>ダーティファイト・裏喧嘩 (Fighting Dirty)</span></li><li><strong>妨害 (Sabotage)</strong>：<span style='color:var(--text-muted);'>空き巣・ピッキング・侵入 (Burglary)</span></li><li><strong>策略 (Subterfuge)</strong>：<span style='color:var(--text-muted);'>嘘の証言、裏切り、騙し討ち</span></li>
+          </ul>
+        </div>
+
+        <div class="item-sub-box" style="margin-top:0.75rem; border-left:3px solid var(--gold);">
+          <div class="item-sub-title" style="color:var(--gold);">獲得可能な資産リスト（計3ドットを自由に割り振る）</div>
+          <ul style="margin:0 0 0 1.2rem; padding:0; line-height:1.6; font-size:0.9rem;">
+            <li><strong>情報屋 (Contacts)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[Social Asset]</span>：<span style='color:var(--text-muted);'>盗品故買屋・ブラックマーケット (Fencer)</span></li><li><strong>資産 (Wealth)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[裏金・現金]</span>：<span style='color:var(--text-muted);'>強盗や闇取引で得た隠し金</span></li><li><strong>偽の身元 (Mask)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[Social Asset]</span>：<span style='color:var(--text-muted);'>偽造パスポート、別名義の身分証</span></li>
+          </ul>
+        </div>
+
+        <details style="margin-top:0.75rem; font-size:0.78rem; color:var(--text-dim);">
+          <summary style="cursor:pointer;">公式ルール原文 (英語)</summary>
+          <div style="margin-top:0.4rem; padding:0.4rem; background:rgba(0,0,0,0.3); border-radius:4px; line-height:1.5;">
+            You make your living by breaking the law, either by taking what you want from others who have it, or by more subtle means. You might have spent some time in prison or worked with other criminals in an organized fashion.
+          </div>
+        </details>
+      </div>
+    
+      <div class="item-card" id="holy-person">
+        <div class="item-header">
+          <div>
+            <span class="item-name">聖職者</span>
+            <span class="item-en">(Holy Person)</span>
+          </div>
+          <span class="item-badge" style="border-color:var(--blue); color:var(--blue);">Mortal（人間時代）</span>
+        </div>
+        <div class="item-desc">あなたは生涯の一部を宗教的信仰の探求と普及に捧げていた。司祭、修道女、修道士、イマーム、あるいは敬虔な地域社会の精神的支柱だったかもしれない。いまや、吸血鬼の呪いが夜な夜なあなたの信仰を試している。</div>
+
+        <div class="item-sub-box" style="margin-top:1rem; border-left:3px solid var(--crimson);">
+          <div class="item-sub-title" style="color:#ff8585;">獲得可能な技能リスト（計5ドットを自由に割り振る / 上限3）</div>
+          <ul style="margin:0 0 0 1.2rem; padding:0; line-height:1.6; font-size:0.9rem;">
+            <li><strong>知覚 (Awareness)</strong>：<span style='color:var(--text-muted);'>信徒の苦悩の察知、直感</span></li><li><strong>表現 (Expression)</strong>：<span style='color:var(--text-muted);'>説教・弁論・祈祷 (Oratory)</span></li><li><strong>知識 (Knowledge)</strong>：<span style='color:var(--text-muted);'>神学・宗教史・経典 (Theology)</span></li><li><strong>医療 (Medicine)</strong>：<span style='color:var(--text-muted);'>看取り、病人の手当、カウンセリング</span></li><li><strong>説得 (Persuasion)</strong>：<span style='color:var(--text-muted);'>改宗、信仰の導き、道徳的教導</span></li>
+          </ul>
+        </div>
+
+        <div class="item-sub-box" style="margin-top:0.75rem; border-left:3px solid var(--gold);">
+          <div class="item-sub-title" style="color:var(--gold);">獲得可能な資産リスト（計3ドットを自由に割り振る）</div>
+          <ul style="margin:0 0 0 1.2rem; padding:0; line-height:1.6; font-size:0.9rem;">
+            <li><strong>情報屋 (Contact)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[Social Asset]</span>：<span style='color:var(--text-muted);'>地元教会・宗教組織の人脈 (Local Church)</span></li><li><strong>隠れ家 (Haven)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[Physical Asset]</span>：<span style='color:var(--text-muted);'>教会の地下室・聖域 (Sanctuary)</span></li><li><strong>地位・影響力 (Influence)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[Social Asset]</span>：<span style='color:var(--text-muted);'>宗教コミュニティへの発言力 (Religious Community)</span></li>
+          </ul>
+        </div>
+
+        <details style="margin-top:0.75rem; font-size:0.78rem; color:var(--text-dim);">
+          <summary style="cursor:pointer;">公式ルール原文 (英語)</summary>
+          <div style="margin-top:0.4rem; padding:0.4rem; background:rgba(0,0,0,0.3); border-radius:4px; line-height:1.5;">
+            You dedicated part of your life to the study and dissemination of a religious faith. You might have been a priest, nun, monk, imam, or devout community pillar. Now, the vampiric curse tests your faith every night.
+          </div>
+        </details>
+      </div>
+    
+      <div class="item-card" id="hunter">
+        <div class="item-header">
+          <div>
+            <span class="item-name">ハンター / 狩人</span>
+            <span class="item-en">(Hunter)</span>
+          </div>
+          <span class="item-badge" style="border-color:var(--blue); color:var(--blue);">Mortal（人間時代）</span>
+        </div>
+        <div class="item-desc">あなたは定命の人生を、鬱蒼とした山林や自然の僻地で獲物を追跡することに費やした。地形を読み、罠を仕掛け、獲物の皮を剥ぎ、必殺の一撃を放つまで息を潜める術を熟知している。</div>
+
+        <div class="item-sub-box" style="margin-top:1rem; border-left:3px solid var(--crimson);">
+          <div class="item-sub-title" style="color:#ff8585;">獲得可能な技能リスト（計5ドットを自由に割り振る / 上限3）</div>
+          <ul style="margin:0 0 0 1.2rem; padding:0; line-height:1.6; font-size:0.9rem;">
+            <li><strong>知覚 (Awareness)</strong>：<span style='color:var(--text-muted);'>足音、微かな異臭、野生の察知</span></li><li><strong>製作 (Craft)</strong>：<span style='color:var(--text-muted);'>罠の作製・設置 (Traps)</span></li><li><strong>格闘 (Fighting)</strong>：<span style='color:var(--text-muted);'>ナイフ戦闘、獣の解体</span></li><li><strong>射撃 (Shooting)</strong>：<span style='color:var(--text-muted);'>ライフル狙撃、長距離射撃</span></li><li><strong>生存 (Survival)</strong>：<span style='color:var(--text-muted);'>足跡・痕跡追跡 (Tracking)</span></li>
+          </ul>
+        </div>
+
+        <div class="item-sub-box" style="margin-top:0.75rem; border-left:3px solid var(--gold);">
+          <div class="item-sub-title" style="color:var(--gold);">獲得可能な資産リスト（計3ドットを自由に割り振る）</div>
+          <ul style="margin:0 0 0 1.2rem; padding:0; line-height:1.6; font-size:0.9rem;">
+            <li><strong>隠れ家 (Haven)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[Physical Asset]</span>：<span style='color:var(--text-muted);'>山中の狩猟小屋、人里離れたロッジ</span></li><li><strong>保管庫 (Vault)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[Physical Asset]</span>：<span style='color:var(--text-muted);'>武器庫・弾薬保管庫 (Armory)</span></li><li><strong>情報屋 (Contacts)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[Social Asset]</span>：<span style='color:var(--text-muted);'>猟友会・アウトドア仲間 (Hunting Club)</span></li>
+          </ul>
+        </div>
+
+        <details style="margin-top:0.75rem; font-size:0.78rem; color:var(--text-dim);">
+          <summary style="cursor:pointer;">公式ルール原文 (英語)</summary>
+          <div style="margin-top:0.4rem; padding:0.4rem; background:rgba(0,0,0,0.3); border-radius:4px; line-height:1.5;">
+            You spent your mortal life tracking prey through dense forests, mountains, or rural backwaters. You know how to read the terrain, set traps, skin quarry, and remain silent until the fatal shot is fired.
+          </div>
+        </details>
+      </div>
+    
+      <div class="item-card" id="military">
+        <div class="item-header">
+          <div>
+            <span class="item-name">軍人</span>
+            <span class="item-en">(Military)</span>
+          </div>
+          <span class="item-badge" style="border-color:var(--blue); color:var(--blue);">Mortal（人間時代）</span>
+        </div>
+        <div class="item-desc">あなたは軍隊に所属し、厳格な規律、指揮系統、戦術的武器の取り扱い、そして極めて過酷な作戦環境下での戦場サバイバルを叩き込まれた。</div>
+
+        <div class="item-sub-box" style="margin-top:1rem; border-left:3px solid var(--crimson);">
+          <div class="item-sub-title" style="color:#ff8585;">獲得可能な技能リスト（計5ドットを自由に割り振る / 上限3）</div>
+          <ul style="margin:0 0 0 1.2rem; padding:0; line-height:1.6; font-size:0.9rem;">
+            <li><strong>運動 (Athletics)</strong>：<span style='color:var(--text-muted);'>障害物走、行軍、持久力</span></li><li><strong>格闘 (Fighting)</strong>：<span style='color:var(--text-muted);'>軍用近接格闘術 (CQC)、銃剣術</span></li><li><strong>医療 (Medicine)</strong>：<span style='color:var(--text-muted);'>野戦応急手当・トリアージ (First Aid)</span></li><li><strong>射撃 (Shooting)</strong>：<span style='color:var(--text-muted);'>アサルトライフル、拳銃、分隊火器</span></li><li><strong>生存 (Survival)</strong>：<span style='color:var(--text-muted);'>戦場サバイバル、隠密野営</span></li>
+          </ul>
+        </div>
+
+        <div class="item-sub-box" style="margin-top:0.75rem; border-left:3px solid var(--gold);">
+          <div class="item-sub-title" style="color:var(--gold);">獲得可能な資産リスト（計3ドットを自由に割り振る）</div>
+          <ul style="margin:0 0 0 1.2rem; padding:0; line-height:1.6; font-size:0.9rem;">
+            <li><strong>保管庫 (Vault)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[Physical Asset]</span>：<span style='color:var(--text-muted);'>防爆武器庫・軍用装備保管庫 (Armory)</span></li><li><strong>情報屋 (Contacts)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[Social Asset]</span>：<span style='color:var(--text-muted);'>退役軍人会・軍関係者のコネ (Military)</span></li><li><strong>資産 (Wealth)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[軍人年金・給与]</span>：<span style='color:var(--text-muted);'>退職金や特殊作戦手当</span></li>
+          </ul>
+        </div>
+
+        <details style="margin-top:0.75rem; font-size:0.78rem; color:var(--text-dim);">
+          <summary style="cursor:pointer;">公式ルール原文 (英語)</summary>
+          <div style="margin-top:0.4rem; padding:0.4rem; background:rgba(0,0,0,0.3); border-radius:4px; line-height:1.5;">
+            You served in an armed force, learning discipline, chain of command, tactical weapons handling, and battlefield survival under the harshest operational conditions.
+          </div>
+        </details>
+      </div>
+    
+      <div class="item-card" id="politician">
+        <div class="item-header">
+          <div>
+            <span class="item-name">政治家</span>
+            <span class="item-en">(Politician)</span>
+          </div>
+          <span class="item-badge" style="border-color:var(--blue); color:var(--blue);">Mortal（人間時代）</span>
+        </div>
+        <div class="item-desc">あなたは地方自治体や国家権力の回廊を泳ぎ渡り、演説を行い、握手を交わし、密室での裏取引を取りまとめ、味方に背中を刺される前に自ら味方を裏切ってきた。</div>
+
+        <div class="item-sub-box" style="margin-top:1rem; border-left:3px solid var(--crimson);">
+          <div class="item-sub-title" style="color:#ff8585;">獲得可能な技能リスト（計5ドットを自由に割り振る / 上限3）</div>
+          <ul style="margin:0 0 0 1.2rem; padding:0; line-height:1.6; font-size:0.9rem;">
+            <li><strong>知覚 (Awareness)</strong>：<span style='color:var(--text-muted);'>政治的駆け引きの洞察 (Insight)</span></li><li><strong>調査 (Investigation)</strong>：<span style='color:var(--text-muted);'>政敵のスキャンダル調査、身辺調査</span></li><li><strong>知識 (Knowledge)</strong>：<span style='color:var(--text-muted);'>憲法・行政法・条例 (Law)</span></li><li><strong>説得 (Persuasion)</strong>：<span style='color:var(--text-muted);'>大衆扇動演説、議場での交渉</span></li><li><strong>策略 (Subterfuge)</strong>：<span style='color:var(--text-muted);'>虚偽の言明、二枚舌 (Deceit)</span></li>
+          </ul>
+        </div>
+
+        <div class="item-sub-box" style="margin-top:0.75rem; border-left:3px solid var(--gold);">
+          <div class="item-sub-title" style="color:var(--gold);">獲得可能な資産リスト（計3ドットを自由に割り振る）</div>
+          <ul style="margin:0 0 0 1.2rem; padding:0; line-height:1.6; font-size:0.9rem;">
+            <li><strong>資産 (Wealth)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[政治資金・献金]</span>：<span style='color:var(--text-muted);'>後援会資金、企業献金</span></li><li><strong>地位 (Status)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[Social Asset]</span>：<span style='color:var(--text-muted);'>人間社会の公職・議員身分 (Mortal Government)</span></li><li><strong>影響力 (Influence)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[Social Asset]</span>：<span style='color:var(--text-muted);'>市役所・官僚機構への影響力 (Bureaucracy)</span></li>
+          </ul>
+        </div>
+
+        <details style="margin-top:0.75rem; font-size:0.78rem; color:var(--text-dim);">
+          <summary style="cursor:pointer;">公式ルール原文 (英語)</summary>
+          <div style="margin-top:0.4rem; padding:0.4rem; background:rgba(0,0,0,0.3); border-radius:4px; line-height:1.5;">
+            You navigated the corridors of municipal or national power, making speeches, shaking hands, cutting backroom deals, and stabbing allies in the back before they could do the same to you.
+          </div>
+        </details>
+      </div>
+    
+      <div class="item-card" id="technician">
+        <div class="item-header">
+          <div>
+            <span class="item-name">技術者</span>
+            <span class="item-en">(Technician)</span>
+          </div>
+          <span class="item-badge" style="border-color:var(--blue); color:var(--blue);">Mortal（人間時代）</span>
+        </div>
+        <div class="item-desc">あなたは機械、エンジン、電気配線、あるいはプログラミングコードを扱っていた。システムが故障した時は修理し、設計図が渡された時はそれを機能する現実へと変換した。</div>
+
+        <div class="item-sub-box" style="margin-top:1rem; border-left:3px solid var(--crimson);">
+          <div class="item-sub-title" style="color:#ff8585;">獲得可能な技能リスト（計5ドットを自由に割り振る / 上限3）</div>
+          <ul style="margin:0 0 0 1.2rem; padding:0; line-height:1.6; font-size:0.9rem;">
+            <li><strong>運動 (Athletics)</strong>：<span style='color:var(--text-muted);'>高所作業、重量資材運搬</span></li><li><strong>製作 (Craft)</strong>：<span style='color:var(--text-muted);'>応急修理・即席代用工作 (Improvised)</span></li><li><strong>格闘 (Fighting)</strong>：<span style='color:var(--text-muted);'>工具を用いた乱闘、自衛</span></li><li><strong>知識 (Knowledge)</strong>：<span style='color:var(--text-muted);'>電子計算機・情報技術・工学 (Technology)</span></li><li><strong>妨害 (Sabotage)</strong>：<span style='color:var(--text-muted);'>システム遮断、防犯装置の無力化</span></li>
+          </ul>
+        </div>
+
+        <div class="item-sub-box" style="margin-top:0.75rem; border-left:3px solid var(--gold);">
+          <div class="item-sub-title" style="color:var(--gold);">獲得可能な資産リスト（計3ドットを自由に割り振る）</div>
+          <ul style="margin:0 0 0 1.2rem; padding:0; line-height:1.6; font-size:0.9rem;">
+            <li><strong>車両 (Vehicle)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[Physical Asset]</span>：<span style='color:var(--text-muted);'>資材積載バン、整備済み作業車</span></li><li><strong>不動産 (Property)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[Physical Asset]</span>：<span style='color:var(--text-muted);'>工作室・ガレージ・研究工房 (Workshop)</span></li><li><strong>資産 (Wealth)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[技術料・特許収入]</span>：<span style='color:var(--text-muted);'>請負代金、特許ロイヤリティ</span></li>
+          </ul>
+        </div>
+
+        <details style="margin-top:0.75rem; font-size:0.78rem; color:var(--text-dim);">
+          <summary style="cursor:pointer;">公式ルール原文 (英語)</summary>
+          <div style="margin-top:0.4rem; padding:0.4rem; background:rgba(0,0,0,0.3); border-radius:4px; line-height:1.5;">
+            You worked with machines, engines, electrical wiring, or code. When systems broke, you repaired them; when blueprints were handed to you, you translated them into functional reality.
+          </div>
+        </details>
+      </div>
+    
+      <div class="item-card" id="blood-deliverer">
+        <div class="item-header">
+          <div>
+            <span class="item-name">血液配達人</span>
+            <span class="item-en">(Blood Deliverer)</span>
+          </div>
+          <span class="item-badge" style="border-color:var(--crimson); color:var(--crimson);">Neonate（若輩吸血鬼としての生業）</span>
+        </div>
+        <div class="item-desc">吸血鬼には血が必要であり、中には特定の味や条件にこだわる者もいる。そこにあなたの出番がある。彼らが必要とする血液を狩り集め、届けるのだ。一財産を築く道を見出したのかもしれないし、エルダーたちに強要されて従事しているのかもしれない。</div>
+
+        <div class="item-sub-box" style="margin-top:1rem; border-left:3px solid var(--crimson);">
+          <div class="item-sub-title" style="color:#ff8585;">獲得可能な技能リスト（計5ドットを自由に割り振る / 上限3）</div>
+          <ul style="margin:0 0 0 1.2rem; padding:0; line-height:1.6; font-size:0.9rem;">
+            <li><strong>運動 (Athletics)</strong>：<span style='color:var(--text-muted);'>都市疾走、荷物を抱えての脱出</span></li><li><strong>知覚 (Awareness)</strong>：<span style='color:var(--text-muted);'>獲物の健康状態の識別、検問の察知</span></li><li><strong>説得 (Persuasion)</strong>：<span style='color:var(--text-muted);'>顧客吸血鬼との価格交渉、定命の説得</span></li><li><strong>妨害 (Sabotage)</strong>：<span style='color:var(--text-muted);'>監視カメラ妨害、アラーム解除</span></li><li><strong>策略 (Subterfuge)</strong>：<span style='color:var(--text-muted);'>夜間の潜行・尾行 (Skulking)</span></li>
+          </ul>
+        </div>
+
+        <div class="item-sub-box" style="margin-top:0.75rem; border-left:3px solid var(--gold);">
+          <div class="item-sub-title" style="color:var(--gold);">獲得可能な資産リスト（計3ドットを自由に割り振る）</div>
+          <ul style="margin:0 0 0 1.2rem; padding:0; line-height:1.6; font-size:0.9rem;">
+            <li><strong>車両 (Vehicle)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[Physical Asset]</span>：<span style='color:var(--text-muted);'>保冷設備付きバン、高速バイク</span></li><li><strong>資産 (Wealth)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[高額な配達報酬]</span>：<span style='color:var(--text-muted);'>エルダーから支払われた金塊や現金</span></li><li><strong>情報屋 (Contact)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[Social Asset]</span>：<span style='color:var(--text-muted);'>闇血液ブローカー・病院関係者 (Blood Market)</span></li>
+          </ul>
+        </div>
+
+        <details style="margin-top:0.75rem; font-size:0.78rem; color:var(--text-dim);">
+          <summary style="cursor:pointer;">公式ルール原文 (英語)</summary>
+          <div style="margin-top:0.4rem; padding:0.4rem; background:rgba(0,0,0,0.3); border-radius:4px; line-height:1.5;">
+            Vampires need blood, and some have specific tastes and requirements. That's where you come in. You hunt down the blood they need and deliver it to them. You might have discovered a way to get rich, or were coerced into service by elders.
+          </div>
+        </details>
+      </div>
+    
+      <div class="item-card" id="clean-up-crew">
+        <div class="item-header">
+          <div>
+            <span class="item-name">掃除屋 / 隠蔽工作員</span>
+            <span class="item-en">(Clean Up Crew)</span>
+          </div>
+          <span class="item-badge" style="border-color:var(--crimson); color:var(--crimson);">Neonate（若輩吸血鬼としての生業）</span>
+        </div>
+        <div class="item-desc">事態が泥沼化した時、厄介ごとを消し去るためにあなたが呼び出される。吸血の痕跡、死体、弾痕、防犯カメラ映像、そしてトラウマを負った定命の目撃者たち――あなたはマスカレードの掟を守るため、現場を徹底的に清掃・隠蔽する。</div>
+
+        <div class="item-sub-box" style="margin-top:1rem; border-left:3px solid var(--crimson);">
+          <div class="item-sub-title" style="color:#ff8585;">獲得可能な技能リスト（計5ドットを自由に割り振る / 上限3）</div>
+          <ul style="margin:0 0 0 1.2rem; padding:0; line-height:1.6; font-size:0.9rem;">
+            <li><strong>運動 (Athletics)</strong>：<span style='color:var(--text-muted);'>死体運搬、障害物越え</span></li><li><strong>格闘 (Fighting)</strong>：<span style='color:var(--text-muted);'>目撃者の無力化、証拠隠滅時の格闘</span></li><li><strong>調査 (Investigation)</strong>：<span style='color:var(--text-muted);'>犯罪現場分析・遺留品捜索 (Crime Scene)</span></li><li><strong>妨害 (Sabotage)</strong>：<span style='color:var(--text-muted);'>化学薬品による証拠分解、データ消去</span></li><li><strong>策略 (Subterfuge)</strong>：<span style='color:var(--text-muted);'>警察への偽通報、アリバイ工作</span></li>
+          </ul>
+        </div>
+
+        <div class="item-sub-box" style="margin-top:0.75rem; border-left:3px solid var(--gold);">
+          <div class="item-sub-title" style="color:var(--gold);">獲得可能な資産リスト（計3ドットを自由に割り振る）</div>
+          <ul style="margin:0 0 0 1.2rem; padding:0; line-height:1.6; font-size:0.9rem;">
+            <li><strong>情報屋 (Contact)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[Social Asset]</span>：<span style='color:var(--text-muted);'>吸血鬼社会の裏フィクサー (Vampiric Fixer)</span></li><li><strong>資産 (Wealth)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[危険手当]</span>：<span style='color:var(--text-muted);'>口止め料、秘密工作報酬</span></li><li><strong>保管庫 (Vault)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[Physical Asset]</span>：<span style='color:var(--text-muted);'>薬品保管庫、死体一時安置室</span></li>
+          </ul>
+        </div>
+
+        <details style="margin-top:0.75rem; font-size:0.78rem; color:var(--text-dim);">
+          <summary style="cursor:pointer;">公式ルール原文 (英語)</summary>
+          <div style="margin-top:0.4rem; padding:0.4rem; background:rgba(0,0,0,0.3); border-radius:4px; line-height:1.5;">
+            When things get messy, you are called to make the trouble disappear. Bodies, bullet holes, security camera footage, and traumatized mortal witnesses—you scrub the scene clean to protect the Masquerade.
+          </div>
+        </details>
+      </div>
+    
+      <div class="item-card" id="hound">
+        <div class="item-header">
+          <div>
+            <span class="item-name">番犬 / 処刑人の手先</span>
+            <span class="item-en">(Hound)</span>
+          </div>
+          <span class="item-badge" style="border-color:var(--crimson); color:var(--crimson);">Neonate（若輩吸血鬼としての生業）</span>
+        </div>
+        <div class="item-desc">あなたは都市のシェリフ（保安官）またはプリンスのための暴力装置・執行人として行動する。違反者が領地の掟を破り、マスカレードを侵害し、宮廷の布告に逆らった時、裁きを受けさせるために連行する任務があなたに下される。</div>
+
+        <div class="item-sub-box" style="margin-top:1rem; border-left:3px solid var(--crimson);">
+          <div class="item-sub-title" style="color:#ff8585;">獲得可能な技能リスト（計5ドットを自由に割り振る / 上限3）</div>
+          <ul style="margin:0 0 0 1.2rem; padding:0; line-height:1.6; font-size:0.9rem;">
+            <li><strong>格闘 (Fighting)</strong>：<span style='color:var(--text-muted);'>関節技、拘束術、警棒・素手攻撃</span></li><li><strong>調査 (Investigation)</strong>：<span style='color:var(--text-muted);'>裏社会の噂・潜伏先捜索 (Streetwise)</span></li><li><strong>妨害 (Sabotage)</strong>：<span style='color:var(--text-muted);'>扉の蹴破り、隠れ家の強制捜査</span></li><li><strong>射撃 (Shooting)</strong>：<span style='color:var(--text-muted);'>制圧射撃、近距離銃撃</span></li><li><strong>策略 (Subterfuge)</strong>：<span style='color:var(--text-muted);'>隠密追尾、夜間潜入 (Stealth)</span></li>
+          </ul>
+        </div>
+
+        <div class="item-sub-box" style="margin-top:0.75rem; border-left:3px solid var(--gold);">
+          <div class="item-sub-title" style="color:var(--gold);">獲得可能な資産リスト（計3ドットを自由に割り振る）</div>
+          <ul style="margin:0 0 0 1.2rem; padding:0; line-height:1.6; font-size:0.9rem;">
+            <li><strong>地位 (Status)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[Social Asset]</span>：<span style='color:var(--text-muted);'>宗派公認の執行官身分 (Sect Enforcer)</span></li><li><strong>隠れ家 (Haven)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[Physical Asset]</span>：<span style='color:var(--text-muted);'>監視用セーフハウス、拘留室付き拠点</span></li><li><strong>資産 (Wealth)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[宮廷給与]</span>：<span style='color:var(--text-muted);'>プリンスからの執行報酬や押収品</span></li>
+          </ul>
+        </div>
+
+        <details style="margin-top:0.75rem; font-size:0.78rem; color:var(--text-dim);">
+          <summary style="cursor:pointer;">公式ルール原文 (英語)</summary>
+          <div style="margin-top:0.4rem; padding:0.4rem; background:rgba(0,0,0,0.3); border-radius:4px; line-height:1.5;">
+            You act as the muscle and enforcer for the city's Sheriff or Prince. When an offender violates domain laws, breaches the Masquerade, or defies court decrees, you are dispatched to drag them in for judgment.
+          </div>
+        </details>
+      </div>
+    
+      <div class="item-card" id="diplomat">
+        <div class="item-header">
+          <div>
+            <span class="item-name">外交官</span>
+            <span class="item-en">(Diplomat)</span>
+          </div>
+          <span class="item-badge" style="border-color:var(--gold); color:var(--gold);">Ancilla（古参吸血鬼の生業）</span>
+        </div>
+        <div class="item-desc">何世紀にもわたる宮廷プロトコルが、対立する氏族間の条約交渉、プリンス同士の領土紛争の調停、そして敵対的な外部領域における自派閥の代表を務める術をあなたに教え込んだ。</div>
+
+        <div class="item-sub-box" style="margin-top:1rem; border-left:3px solid var(--crimson);">
+          <div class="item-sub-title" style="color:#ff8585;">獲得可能な技能リスト（計5ドットを自由に割り振る / 上限3）</div>
+          <ul style="margin:0 0 0 1.2rem; padding:0; line-height:1.6; font-size:0.9rem;">
+            <li><strong>知覚 (Awareness)</strong>：<span style='color:var(--text-muted);'>共感・本心の察知 (Empathy)</span></li><li><strong>表現 (Expression)</strong>：<span style='color:var(--text-muted);'>格式高い宮廷儀礼演説、書簡作成</span></li><li><strong>知識 (Knowledge)</strong>：<span style='color:var(--text-muted);'>吸血鬼社会の法と伝統 (Kindred Law)</span></li><li><strong>説得 (Persuasion)</strong>：<span style='color:var(--text-muted);'>条約締結、停戦交渉、調停</span></li><li><strong>策略 (Subterfuge)</strong>：<span style='color:var(--text-muted);'>外交的駆け引き、情報戦</span></li>
+          </ul>
+        </div>
+
+        <div class="item-sub-box" style="margin-top:0.75rem; border-left:3px solid var(--gold);">
+          <div class="item-sub-title" style="color:var(--gold);">獲得可能な資産リスト（計3ドットを自由に割り振る）</div>
+          <ul style="margin:0 0 0 1.2rem; padding:0; line-height:1.6; font-size:0.9rem;">
+            <li><strong>隠れ家 (Haven)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[Physical Asset]</span>：<span style='color:var(--text-muted);'>各大都市の大使館風公邸、要塞邸宅</span></li><li><strong>地位 (Status)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[Social Asset]</span>：<span style='color:var(--text-muted);'>吸血鬼宮廷における外交官の地位 (Kindred Court)</span></li><li><strong>影響力 (Influence)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[Social Asset]</span>：<span style='color:var(--text-muted);'>他都市や他宗派との外交チャネル (Diplomacy)</span></li>
+          </ul>
+        </div>
+
+        <details style="margin-top:0.75rem; font-size:0.78rem; color:var(--text-dim);">
+          <summary style="cursor:pointer;">公式ルール原文 (英語)</summary>
+          <div style="margin-top:0.4rem; padding:0.4rem; background:rgba(0,0,0,0.3); border-radius:4px; line-height:1.5;">
+            Centuries of court protocol taught you how to negotiate treaties between rival clans, mediate territorial disputes between Princes, and represent your sect in hostile foreign domains.
+          </div>
+        </details>
+      </div>
+    
+      <div class="item-card" id="harpy">
+        <div class="item-header">
+          <div>
+            <span class="item-name">ハーピー</span>
+            <span class="item-en">(Harpy)</span>
+          </div>
+          <span class="item-badge" style="border-color:var(--gold); color:var(--gold);">Ancilla（古参吸血鬼の生業）</span>
+        </div>
+        <div class="item-desc">あなたはエリジウムの流行発信者であり、社交界の門番である。あなたの唇から放たれる一言の辛辣な囁きや称賛が、若き吸血鬼を一躍脚光を浴びせることもあれば、宮廷社会におけるエルダーの威信を失墜させることもある。</div>
+
+        <div class="item-sub-box" style="margin-top:1rem; border-left:3px solid var(--crimson);">
+          <div class="item-sub-title" style="color:#ff8585;">獲得可能な技能リスト（計5ドットを自由に割り振る / 上限3）</div>
+          <ul style="margin:0 0 0 1.2rem; padding:0; line-height:1.6; font-size:0.9rem;">
+            <li><strong>知覚 (Awareness)</strong>：<span style='color:var(--text-muted);'>視線や態度の機微、服装の流行察知</span></li><li><strong>表現 (Expression)</strong>：<span style='color:var(--text-muted);'>機知に富んだ風刺、ウィット、社交辞令</span></li><li><strong>知識 (Knowledge)</strong>：<span style='color:var(--text-muted);'>血統・家系図・古今の怨恨 (Genealogy)</span></li><li><strong>説得 (Persuasion)</strong>：<span style='color:var(--text-muted);'>世論誘導、評価の操作</span></li><li><strong>策略 (Subterfuge)</strong>：<span style='color:var(--text-muted);'>裏工作、偽りの噂の流布 (Deceit)</span></li>
+          </ul>
+        </div>
+
+        <div class="item-sub-box" style="margin-top:0.75rem; border-left:3px solid var(--gold);">
+          <div class="item-sub-title" style="color:var(--gold);">獲得可能な資産リスト（計3ドットを自由に割り振る）</div>
+          <ul style="margin:0 0 0 1.2rem; padding:0; line-height:1.6; font-size:0.9rem;">
+            <li><strong>隠れ家 (Haven)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[Physical Asset]</span>：<span style='color:var(--text-muted);'>エリジウム近傍の豪奢なサロンサロン邸</span></li><li><strong>地位 (Status)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[Social Asset]</span>：<span style='color:var(--text-muted);'>エリジウムの公認ハーピー (Elysium Harpy)</span></li><li><strong>影響力 (Influence)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[Social Asset]</span>：<span style='color:var(--text-muted);'>上流社交界・文化人への影響力 (High Society)</span></li>
+          </ul>
+        </div>
+
+        <details style="margin-top:0.75rem; font-size:0.78rem; color:var(--text-dim);">
+          <summary style="cursor:pointer;">公式ルール原文 (英語)</summary>
+          <div style="margin-top:0.4rem; padding:0.4rem; background:rgba(0,0,0,0.3); border-radius:4px; line-height:1.5;">
+            You are a tastemaker and social gatekeeper of Elysium. A single cutting whisper or praise from your lips can raise a fledgling to prominence or destroy an elder's prestige in court society.
+          </div>
+        </details>
+      </div>
+    
+      <div class="item-card" id="sheriff">
+        <div class="item-header">
+          <div>
+            <span class="item-name">シェリフ / 保安官</span>
+            <span class="item-en">(Sheriff)</span>
+          </div>
+          <span class="item-badge" style="border-color:var(--gold); color:var(--gold);">Ancilla（古参吸血鬼の生業）</span>
+        </div>
+        <div class="item-desc">あなたはドメイン（領地）における最高法執行権力者であり、プリンスにのみ責任を負う。ドメインの治安を維持し、マスカレードへの脅威を捜査し、反逆した吸血鬼を処刑する。</div>
+
+        <div class="item-sub-box" style="margin-top:1rem; border-left:3px solid var(--crimson);">
+          <div class="item-sub-title" style="color:#ff8585;">獲得可能な技能リスト（計5ドットを自由に割り振る / 上限3）</div>
+          <ul style="margin:0 0 0 1.2rem; padding:0; line-height:1.6; font-size:0.9rem;">
+            <li><strong>知覚 (Awareness)</strong>：<span style='color:var(--text-muted);'>虚偽の看破、心理洞察 (Insight)</span></li><li><strong>格闘 (Fighting)</strong>：<span style='color:var(--text-muted);'>致命的近接戦闘、処刑術</span></li><li><strong>調査 (Investigation)</strong>：<span style='color:var(--text-muted);'>本格的犯罪捜査、物的証拠分析</span></li><li><strong>説得 (Persuasion)</strong>：<span style='color:var(--text-muted);'>威圧的尋問、司法取引</span></li><li><strong>射撃 (Shooting)</strong>：<span style='color:var(--text-muted);'>狙撃、対吸血鬼大口径火器</span></li>
+          </ul>
+        </div>
+
+        <div class="item-sub-box" style="margin-top:0.75rem; border-left:3px solid var(--gold);">
+          <div class="item-sub-title" style="color:var(--gold);">獲得可能な資産リスト（計3ドットを自由に割り振る）</div>
+          <ul style="margin:0 0 0 1.2rem; padding:0; line-height:1.6; font-size:0.9rem;">
+            <li><strong>協力者 (Ally)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[Social Asset]</span>：<span style='color:var(--text-muted);'>直属のハウンド部隊・部下たち (Hound Cadre)</span></li><li><strong>地位 (Status)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[Social Asset]</span>：<span style='color:var(--text-muted);'>プリンス直属閣僚・司法官 (Prince's Cabinet)</span></li><li><strong>保管庫 (Vault)</strong> <span style='font-size:0.8rem; color:var(--gold);'>[Physical Asset]</span>：<span style='color:var(--text-muted);'>証拠保管金庫、押収異端遺物庫</span></li>
+          </ul>
+        </div>
+
+        <details style="margin-top:0.75rem; font-size:0.78rem; color:var(--text-dim);">
+          <summary style="cursor:pointer;">公式ルール原文 (英語)</summary>
+          <div style="margin-top:0.4rem; padding:0.4rem; background:rgba(0,0,0,0.3); border-radius:4px; line-height:1.5;">
+            You are the supreme law enforcement authority of the domain, answering only to the Prince. You maintain domain security, investigate threats to the Masquerade, and execute rogue Kindred.
+          </div>
+        </details>
+      </div>
+    
+    </div>
+
+    <div style="margin-top:3rem; text-align:center;">
+      <a href="index.html#step4" class="link-banner-btn" style="display:inline-block; padding:0.75rem 2rem; font-size:1rem;">← キャラメイク手順 (STEP 4) に戻る</a>
+    </div>
+  </main>
+</body>
+</html>

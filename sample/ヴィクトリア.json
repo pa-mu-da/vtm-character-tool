@@ -1,0 +1,144 @@
+{
+  "name": "ヴィクトリア",
+  "memo": "〈企業の役員、ダークホースの辣腕実業家〉\nヴィクトリアは、外見年齢45歳、実年齢57歳の、ヴェントルーの吸血鬼である。2014年の春に〈抱擁〉を受けている。彼女の原風景は1990年代、企業権力の中で台頭したキャリアウーマン文化にある。\n\n所持品:猟銃(中火器/3ダメージ/長距離まで),ピストル(軽火器/2ダメージ/中距離まで),複数の身元に対応した各種IDカード,貸倉庫の鍵",
+  "clan": "Ventrue",
+  "disciplines": [
+    {
+      "name": "Dominate",
+      "dots": 3,
+      "powers": [
+        {
+          "name": "Cloud Memory",
+          "description": "対象の目を見つめて直近の記憶を霧散させ、直前に行われた会話や目撃した超自然的な出来事を綺麗に忘れさせる。"
+        },
+        {
+          "name": "Submerged Directive",
+          "description": "対象の潜在意識の奥深くに命令と起動条件（トリガー）を埋め込み、特定の合図や状況が発生した際に自動実行させる。"
+        },
+        {
+          "name": "Deliver Command",
+          "description": "支配下に置いた操り人形を通じて、その場にいない第三者へ自身の命令を伝達させ、実行させることができる。"
+        }
+      ]
+    },
+    {
+      "name": "Fortitude",
+      "dots": 1,
+      "powers": [
+        {
+          "name": "Unswayable Mind",
+          "description": "鉄壁の精神力で自身の心を固め、超自然的な魅了、恐怖、強制、マインドコントロールに対する抵抗判定にボーナスを得る。"
+        }
+      ]
+    }
+  ],
+  "curse": "選り好みの味覚",
+  "curseDescription": "特定の厳格な基準に合致する特定の人間からしか血を吸って栄養を得ることができない。",
+  "frenzy": "傲慢",
+  "frenzyDescription": "支配欲が頭をもたげ、その場の主導権を力ずくで握るため手段を選ばなくなる。",
+  "attributes": {
+    "strength": 1,
+    "dexterity": 2,
+    "stamina": 3,
+    "charisma": 3,
+    "manipulation": 4,
+    "composure": 3,
+    "intelligence": 3,
+    "wits": 2,
+    "resolve": 3
+  },
+  "skills": {
+    "Athletics": {
+      "dots": 2,
+      "focuses": "走法"
+    },
+    "Awareness": {
+      "dots": 3,
+      "focuses": "共感,洞察"
+    },
+    "Craft": {
+      "dots": 0,
+      "focuses": ""
+    },
+    "Expression": {
+      "dots": 2,
+      "focuses": "雄弁"
+    },
+    "Fighting": {
+      "dots": 0,
+      "focuses": ""
+    },
+    "Investigation": {
+      "dots": 2,
+      "focuses": "ゴシップ"
+    },
+    "Knowledge": {
+      "dots": 2,
+      "focuses": "ビジネス"
+    },
+    "Medicine": {
+      "dots": 0,
+      "focuses": ""
+    },
+    "Persuasion": {
+      "dots": 3,
+      "focuses": "脅迫,交渉"
+    },
+    "Sabotage": {
+      "dots": 0,
+      "focuses": ""
+    },
+    "Shooting": {
+      "dots": 2,
+      "focuses": "中火器"
+    },
+    "Subterfuge": {
+      "dots": 2,
+      "focuses": "欺瞞"
+    },
+    "Survival": {
+      "dots": 0,
+      "focuses": ""
+    }
+  },
+  "resources": [
+    {
+      "category": "Wealth",
+      "detail": "",
+      "dots": 3
+    },
+    {
+      "category": "Mask",
+      "detail": "",
+      "dots": 2
+    },
+    {
+      "category": "Haven",
+      "detail": "",
+      "dots": 2
+    },
+    {
+      "category": "Vehicle",
+      "detail": "乗用車",
+      "dots": 2
+    }
+  ],
+  "lifepaths": [
+    "Criminal",
+    "Corporate Executive"
+  ],
+  "merits": [
+    "Friends in High Places"
+  ],
+  "flaws": [
+    "野心:常により多くを求め、欲しいものを手に入れるために今あるものを危険に晒すことが多い。"
+  ],
+  "nature": "Perfectionist",
+  "natureDescription": "一切の妥協を許さず、完璧な成果や秩序を追求する本性。",
+  "beast": "高慢",
+  "beastDescription": "自らの血が他者より優れていると見なし、服従と忠誠を要求する内なる衝動。",
+  "generation": "13th",
+  "generationModifier": 1,
+  "sire": "Vigilant Sire",
+  "imageUrl": null
+}
